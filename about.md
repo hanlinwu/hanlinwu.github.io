@@ -2,7 +2,7 @@
 layout: article
 titles:
   en: About
-  zh: 关于
+  zh: About | 关于
   zh-Hans: 关于
   zh-Hant: 關於
 key: page-about
@@ -11,9 +11,9 @@ Welcome to my blog!
 
 My Name is Kongfu Panda, I am a graduate student working at [BNU](http://www.bnu.edu.cn) in Beijing.
 
-## Skills
+## Skills and Interests | 技能 & 兴趣
 
-- Stochastic Process
+- Stochastic Process, Probability Theory
 - HTML5, CSS3, JavaScript, Vue.js
 - Sql, Python, Django
 - Matlab, R
@@ -22,9 +22,7 @@ My Name is Kongfu Panda, I am a graduate student working at [BNU](http://www.bnu
 
 ## About Me | 关于我
 
-你们好，我叫 Kongfu Panda，这是我的博客。
-
-如果你有任何问题，请给我发送邮件：[hlwu.bnu@gmail.com](mailto:hlwu.bnu@gmail.com)
+你们好，我叫 Kongfu Panda，这是我的博客。我是一名在读的研究生，如果你有任何问题，请给我发送邮件：[hlwu.bnu@gmail.com](mailto:hlwu.bnu@gmail.com)
 
 ## Some Links | 相关链接
 
