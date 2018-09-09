@@ -4,6 +4,7 @@ tags:
  - 深度学习
  - 翻译
 key : deep-learning-review
+mathjax: true
 ---
 ## 摘要
 

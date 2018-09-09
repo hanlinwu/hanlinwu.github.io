@@ -5,6 +5,7 @@ tags:
  - 布朗运动
  - 读书笔记
 key : minkowski-and-hausdorff-dimention
+mathjax: true
 ---
 ## 4.1.1 Minkowski 维数
 我们应该如何描述一个几何对象的维数呢? 良好的维数的定义应是**本质的**, 也就是说不能依赖于这个几何对象所在的具体的空间中, 如 $$R^n$$. 关于维数的良定义, 应在任何度量空间中都可以使用.

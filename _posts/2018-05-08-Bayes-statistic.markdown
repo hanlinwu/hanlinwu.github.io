@@ -3,6 +3,7 @@ title: "Bayes 估计,Bayes 公式的密度函数形式"
 tags:
  - 统计学
 key : bayes-and-bayes-formulation
+mathjax: true
 ---
 Bayes 统计的基本观点是: **将参数 $$\theta$$ 看做随机变量.** 既然 $$\theta$$ 是随机变量, 就可以使用一个概率分布来描述, 我们称这个分布为**先验分布**.
 
