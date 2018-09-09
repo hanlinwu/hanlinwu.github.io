@@ -1,5 +1,5 @@
 ---
-title: "『布朗运动』§4.1 Minkowski 与 Hausdorff维数"
+title: "§4.1 Minkowski 与 Hausdorff维数"
 tags:
  - 随机过程
  - 布朗运动

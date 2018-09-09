@@ -94,7 +94,7 @@ chart: # false (default), true
 
 ## => Paginate
 ##############################
-paginate: 8
+paginate: 6
 paginate_path: /page:num # don't change this unless for special need
 
 
@@ -118,21 +118,21 @@ comments:
     clientID    : 2ebc7221b98ab062c007
     clientSecret: cd12cfb954deebe6334ca12b157b46d48cce1d3b
     repository  : hanlinwu.github.io
-    owner       : hanliwu
+    owner       : #26297010
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      hanlinwu  # - your GitHub Id
+      #26297010  # - your GitHub Id
 
 
 ## => Pageview
 ##############################
 pageview:
-  provider: false # false (default), "leancloud", "custom"
+  provider: leancloud # false (default), "leancloud", "custom"
 
   ## Leancloud
   leancloud:
-    app_id    : # LeanCloud App id
-    app_key   : # LeanCloud App key
-    app_class : # LeanCloud App class
+    app_id    : 02v3w7rcmK7dqdRPIcs8yokG-gzGzoHsz # LeanCloud App id
+    app_key   : c0HGud6mUF7MVrBKckCirQqk # LeanCloud App key
+    app_class : blog_statistics # LeanCloud App class
 
 
 ## => Analytics

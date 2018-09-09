@@ -1,5 +1,5 @@
 ---
-title: 『深度学习』Deep Learning Review(未完待续...)
+title: Deep Learning Review(未完待续...)
 tags:
  - 深度学习
  - 翻译
