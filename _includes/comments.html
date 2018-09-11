@@ -6,4 +6,7 @@
   {%- elsif site.comments.provider == 'custom' -%}
     {%- include comments-providers/custom.html -%}
   {%- endif -%}
+  {%- elsif site.comments.provider == 'valine' -%}
+    {%- include comments-providers/valine.html -%}
+  {%- endif -%}
 {%- endif -%}

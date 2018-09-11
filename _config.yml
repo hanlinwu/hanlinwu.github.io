@@ -106,7 +106,7 @@ sources: # bootcdn (default), unpkg
 ## => Comments
 ##############################
 comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "custom"
+  provider: valine # false (default), "disqus", "gitalk", "custom", "valine"
 
   ## Disqus
   disqus:
@@ -121,6 +121,11 @@ comments:
     owner       : #26297010
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       #26297010  # - your GitHub Id
+
+  valine:
+    app_id  : '02v3w7rcmK7dqdRPIcs8yokG-gzGzoHsz'
+    app_key : 'c0HGud6mUF7MVrBKckCirQqk'
+    placeholder : 'ヾﾉ≧∀≦)o来啊，快活啊!'
 
 
 ## => Pageview
