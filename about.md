@@ -9,7 +9,7 @@ key: page-about
 ---
 Welcome to my blog! 
 
-My Name is Kongfu Panda, I am a graduate student working at [BNU](http://www.bnu.edu.cn) in Beijing.
+My Name is Kongfu Panda, I am a graduate student of [BNU](http://www.bnu.edu.cn).
 
 你们好，我叫 "Kongfu Panda"，这是我的博客。
 
