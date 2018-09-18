@@ -11,15 +11,16 @@ mathjax: true
    大数定律有两种常见的表现形式：弱大数定律和强大数定律. 在古典意义下, 两种大数定律都是表明样本的均值收敛于随机变量的期望值. 强与弱的差别在于收敛方式的不同, 强大数定律要求几乎处处收敛, 然而弱大数定律仅要求依概率收敛.
 
    在现代意义下, 设 $\{X_n:n\in\mathbb N\}$ 是随机变量序列, 令 $S_n:=\sum_{k=1}^{n}X_k,n\in \mathbb N$. 若存在 $\{a_n\}\subset\mathbb R,\{b_n\}\subset\mathbb R_+$, 且 $b_n\rightarrow\infty$ 使
-
-   $$ \frac{S_n-a_n}{b_n}\rightarrow 0, \text{依概率 $\mathbf P$ (或者 $a.e.$)},$$
+  \[
+    \frac{S_n-a_n}{b_n}\rightarrow 0, \text{依概率 $\mathbf P$ (或者 $a.e.$)},
+  \] 
 
    则称 $\{X_n\}$ 服从弱大数定律 (或者强大数定律).
 
-  ## 弱大数定律
+  # 弱大数定律
    根据条件的不同, 弱大数定律有几种不同的表现形式.
  
-  ### Chebyshev 大数定理
+  ## Chebyshev 大数定理
    首先考虑古典意义下的弱大数定律. 假设 $\mathbf E S_n<\infty$, 根据定理 ??, 如果 $\frac{S_n}{n}\xrightarrow 2 \frac{\mathbf E S_n}{n}$, 便可以得到 $\frac{S_n}{n}\xrightarrow\mathbf P \frac{\mathbf E S_n}{n}$. 由于
    
    $$\frac{S_n}{n}\xrightarrow2 \frac{\mathbf E S_n}{n}\Leftrightarrow\frac{\text{Var} (S_n)}{n^2}\rightarrow 0,$$
