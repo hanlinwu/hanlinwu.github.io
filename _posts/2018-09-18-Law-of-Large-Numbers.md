@@ -28,7 +28,7 @@ $$
    
   $$\frac{S_n}{n}\xrightarrow2 \frac{\mathbf E S_n}{n}\Leftrightarrow\frac{\text{Var} (S_n)}{n^2}\rightarrow 0,$$
 
-   为了简化 $\text{Var}(S_n)$ 的计算, 给出不相关随机变量的定义.
+  为了简化 $\text{Var}(S_n)$ 的计算, 给出不相关随机变量的定义.
 
   **定义：** 设$X,Y$ 为随机变量, $E|X|^2<\infty,E|Y|^2<\infty$ 且
 
@@ -42,7 +42,7 @@ $$
    \text{Var}(X_1+X_2+\cdots+X_n)=\text{Var}(X_1)+\text{Var}(X_2)+\cdots+\text{Var}(X_n).
   $$
 
-   事实上, 令 $\mu_i=EX_i, S_n=\sum_{i=1}^{n}X_i.$ 有
+  事实上, 令 $\mu_i=EX_i, S_n=\sum_{i=1}^{n}X_i.$ 有
    
   $$
    \begin{aligned}
@@ -67,85 +67,99 @@ $$
   **定理：**(Chebyshev 大数定理) 若 $\{X_n:n\in N\}$ 两两不相关, $\mathbf E S_n$ 存在且 $\mathop{\sup}\limits_n \text{Var} (X_n)<\infty$, 则
   
   $$
-     \frac{S_n-ES_n}{n}\xrightarrow{2}0,
+    \frac{S_n-ES_n}{n}\xrightarrow{2}0,
   $$
   
   因而
   
   $$
-     \frac{S_n-ES_n}{n}\xrightarrow{\textbf P}0.
+    \frac{S_n-ES_n}{n}\xrightarrow{\textbf P}0.
   $$
 
   **证明：** 因为 $\mathbf E(S_n)<\infty$, 令 $\mu:=\frac{\mathbf E S_n}{n}$. 所以 $\exists C\in\mathbb R$,
   
   $$
-     E(S_n/n-\mu)^2=\text{Var}(S_n/n)=\frac{1}{n^2}(\text{Var}(X_1)+\cdots+\text{Var}(X_n))\leq\frac{Cn}{n^2}\xrightarrow 2 0,
+    E(S_n/n-\mu)^2=\text{Var}(S_n/n)=\frac{1}{n^2}(\text{Var}(X_1)+\cdots+\text{Var}(X_n))\leq\frac{Cn}{n^2}\xrightarrow 2 0,
   $$
   
   从而根据定理 \ref{dl:2}(3), 依概率收敛也正确.
 
-   上述定理中极为重要的一种特殊情况是： $X_1,X_2,\cdots$ 为独立同分布序列. 简单地说, 上面定理告诉我们, 当 $EX_i^2<\infty$ 时, $S_n/n$ 依概率收敛到 $X_i$ 的均值.
-  \subsection{ Khinchin 大数定理}
-    Chebyshev 大数定理的核心结论仅仅与 $X_n$ 有关, 但是条件却涉及到了二阶矩, 于是我们希望这个假设可以去掉. 事实上, 二阶矩有限的条件不是必需的, 这样就有了 Khinchin 大数定理.
-      \begin{dl}[ Khinchin 大数定理]\label{dl:xinqin}
-     设 $\{X_n:n\in N\}$ 为独立同分布序列且 $\mathbf E|X_1|<\infty$, 令 $S_n:=\sum_{k=1}^{n}X_k$, 则
-     \[
-     \frac{S_n}{n}\xrightarrow\mathbf P \mathbf E X_1.
-     \]
-     \end{dl}
+  上述定理中极为重要的一种特殊情况是： $X_1,X_2,\cdots$ 为独立同分布序列. 简单地说, 上面定理告诉我们, 当 $EX_i^2<\infty$ 时, $S_n/n$ 依概率收敛到 $X_i$ 的均值.
+
+### Khinchin 大数定理
+  Chebyshev 大数定理的核心结论仅仅与 $X_n$ 有关, 但是条件却涉及到了二阶矩, 于是我们希望这个假设可以去掉. 事实上, 二阶矩有限的条件不是必需的, 这样就有了 Khinchin 大数定理.
+
+  **定理：** (Khinchin 大数定理) 设 $\{X_n:n\in N\}$ 为独立同分布序列且 $\mathbf E|X_1|<\infty$, 令 $S_n:=\sum_{k=1}^{n}X_k$, 则
+
+  $$
+    \frac{S_n}{n}\xrightarrow\mathbf P \mathbf E X_1.
+  $$
 
    在 Khinchin 大数定理中, 将二阶矩有限的条件减弱到了一阶矩有限. 令人惊奇的是, 我们甚至可以将一阶矩有限的条件去掉, 得到一个更强的结论. 我们将先证明下面这个定理, 然后则不难给出 Khinchin 大数定理的证明.
 
-      \begin{dl}[弱大数定律]\label{dl:prexinqin}
-     设 $X_n:n\in N$ 为独立同分布序列, $S_n:=\sum_{k=1}^{n}X_k$, 则 $\{X_n:n\in \mathbf N\}$ 满足弱大数定律（即存在 $\{a_n\}\subset\mathbf R$ 使 $\frac{S_n}{n}-a_n\rightarrow 0$）的充要条件是
-     \[
-     \lim_{x\rightarrow\infty}x\mathbf P(|X_1|>x)=0.
-     \]
-     在条件成立时, $a_n:=\mathbf E(X_1I_{\{X_1\leq n\}}). $
-     \end{dl}
+  **定理：** 设 $X_n:n\in N$ 为独立同分布序列, $S_n:=\sum_{k=1}^{n}X_k$, 则 $\{X_n:n\in \mathbf N\}$ 满足弱大数定律（即存在 $\{a_n\}\subset\mathbf R$ 使 $\frac{S_n}{n}-a_n\rightarrow 0$）的充要条件是
+  
+  $$
+    \lim_{x\rightarrow\infty}x\mathbf P(|X_1|>x)=0.
+  $$
 
-     需要注意的是, 上述定理并不要求期望 $\mathbf E(X_1)$ 存在. 在后面 \ref{sec:jgbtdsdvdqb} 小节的例 \ref{ex:rdsdlfl} 中给出了一个期望不存在却满足弱大数定律的例子.
+  在条件成立时, $a_n:=\mathbf E(X_1I_{\{X_1\leq n\}}). $
 
-     证明定理 \ref{dl:prexinqin} 需要用到尾等价序列的概念以及“截尾”、对称化的手法. 为此, 我们给出下面一系列的定义和引理.
-   \subsection{截尾——构造尾等价序列}
-   \begin{dy}
-     设 $\{X_n:n\in N\},\{Y_n:n\in N\}$ 是两个随机变量序列,若
-     \[
-     \mathbf P(X_n\neq Y_n,\io)=0,
-     \]
-     则称它们尾等价.
-   \end{dy}
-   由引理 $\ref{dl:borel}$ (Borel-Cantelli 引理) 可知, 若
-   \[
+  需要注意的是, 上述定理并不要求期望 $\mathbf E(X_1)$ 存在. 在后面 \ref{sec:jgbtdsdvdqb} 小节的例 \ref{ex:rdsdlfl} 中给出了一个期望不存在却满足弱大数定律的例子.
+
+  证明定理 \ref{dl:prexinqin} 需要用到尾等价序列的概念以及“截尾”、对称化的手法. 为此, 我们给出下面一系列的定义和引理.
+
+### 截尾——构造尾等价序列
+  **定义：** 设 $\{X_n:n\in N\},\{Y_n:n\in N\}$ 是两个随机变量序列,若
+    
+  $$
+    \mathbf P(X_n\neq Y_n,\text{i.o.})=0,
+  $$
+  
+  则称它们尾等价.
+
+
+  由引理 $\ref{dl:borel}$ (Borel-Cantelli 引理) 可知, 若
+  
+  $$
    \sum_{n=1}^{\infty}\mathbf P(X_n\neq Y_n)<\infty,
-   \]
-   则 $\{X_n:n\in N\}$ 与 $\{Y_n:n\in N\}$ 尾等价, 由此易知：对于一个随机变量序列 ${X_n:n\in N}$, 常常可以通过“截尾”的手法得到一个与之尾等价的随机变量序列.
+  $$
 
-   对于给定的随机变量 $X$ 以及 $c\in(0,\infty)$, 称
-   \begin{align}\label{eq:jd}
+  则 $\{X_n:n\in N\}$ 与 $\{Y_n:n\in N\}$ 尾等价, 由此易知：对于一个随机变量序列 ${X_n:n\in N}$, 常常可以通过“截尾”的手法得到一个与之尾等价的随机变量序列.
+
+  对于给定的随机变量 $X$ 以及 $c\in(0,\infty)$, 称
+
+  $$
+   \begin{aligned}
    X^c:=XI_{\{|X|\leq c\}}=\left\{\begin{matrix}
      X,&|X|\leq c,\\
      0,&|X|>c
    \end{matrix}\right.
-   \end{align}
-   为 $X$ 在 $c$ 处的截尾. 于是对于任何一个有限值的随机变量序列 $\{X_n:n\in N\}$, 存在 $c_n\in (0,\infty)$ 使 $\mathbf{P}(|X_n|>c_n)<\frac{1}{2^n}$, 因而
-   \[
+   \end{aligned}
+  $$
+
+  为 $X$ 在 $c$ 处的截尾. 于是对于任何一个有限值的随机变量序列 $\{X_n:n\in N\}$, 存在 $c_n\in (0,\infty)$ 使 $\mathbf{P}(|X_n|>c_n)<\frac{1}{2^n}$, 因而
+  
+  $$
    \sum_{n=1}^{\infty}\mathbf{P}(X_n\neq X_n^{c_n})=\sum_{n=1}^{\infty}\mathbf{P}(|X_n|>c_n)<1.
-   \]
+  $$
+
    于是 $\{X_n:n\in \mathbf N\}$ 与 $\{X_n^{c_n}:n\in \mathbf N\}$ 尾等价.
-   \begin{yl}
-     设 $\{X_n:n\in N\},\{Y_n:n\in N\}$ 为尾等价的两个随机变量列, 则
-     \begin{enumerate}[(1)]
-       \item $\mathop{\sum}\limits_{n=1}^{\infty}(X_n-Y_n)\ \text{a.s.}$ 收敛；
-       \item $\forall \{a_n\}\subset \mathbf{R}_+, a_n\rightarrow \infty$,
-       \[
+
+
+  **引理：** 设 $\{X_n:n\in N\},\{Y_n:n\in N\}$ 为尾等价的两个随机变量列, 则
+    
+  1. $\mathop{\sum}\limits_{n=1}^{\infty}(X_n-Y_n)\ \text{a.s.}$ 收敛；
+  2. $\forall \{a_n\}\subset \mathbf{R}_+, a_n\rightarrow \infty$,
+  
+    $$
        \frac{1}{a_n}\sum_{k=1}^{n}(X_k-Y_k)\rightarrow0,\ \text{a.s.},
-       \]
-       因而也依概率收敛于0；
-       \item 以概率1, $\sum X_n$ 与 $\sum Y_n$, $\frac{1}{a_n}\sum X_n$ 与 $\frac{1}{a_n}\sum Y_n$ 以同样的方式收敛或者发散；
-       \item 若 $\frac{1}{a_n}\mathop{\sum}\limits_{k=1}^{n}X_k\xrightarrow{\mathbf P}X$, 则 $\frac{1}{a_n}\mathop{\sum}\limits_{k=1}^{n}Y_k\xrightarrow{\mathbf P}X$.
-     \end{enumerate}
-   \end{yl}
+    $$
+
+    因而也依概率收敛于0；
+  3. 以概率1, $\sum X_n$ 与 $\sum Y_n$, $\frac{1}{a_n}\sum X_n$ 与 $\frac{1}{a_n}\sum Y_n$ 以同样的方式收敛或者发散；
+  4. 若 $\frac{1}{a_n}\mathop{\sum}\limits_{k=1}^{n}X_k\xrightarrow{\mathbf P}X$, 则 $\frac{1}{a_n}\mathop{\sum}\limits_{k=1}^{n}Y_k\xrightarrow{\mathbf P}X$.
+
    \begin{proof}
      由尾等价的定义知, 存在 $N\in\h F$, $\mathbf P(N)=0$, 使 $\forall\omega\in N^c$, 不可能有无穷个 $n\in N$ 使 $X_n(\omega)\neq Y_n(\omega)$ 成立, 即存在 $n_0(\omega)$ 使
      \[
@@ -294,7 +308,7 @@ $$
      令 $Y_k=X_kI_{\{|X_k|\leq k\}}, T_n=Y_1+Y_2+\cdots+Y_n$. 则 $\frac{T_n}{n}\xrightarrow{a.s.}\mu.$
    \end{yl}
    \begin{proof}
-     $\mathop{\sum}\limits_{k=1}^\infty\mathbf P(|X_k|>k)\leq\int_0^\infty\mathbf P(|X_1|>t)dt=E|X_1|<\infty$, 所以 $\mathbf P(X_k\neq Y_k\ \io)=0.$ 这表明对于任意的 $n\in\mathbf N$, $|S_n(\omega)-T_n(\omega)|\leq R(\omega)<\infty\ \text{a.s.}$
+     $\mathop{\sum}\limits_{k=1}^\infty\mathbf P(|X_k|>k)\leq\int_0^\infty\mathbf P(|X_1|>t)dt=E|X_1|<\infty$, 所以 $\mathbf P(X_k\neq Y_k\ \text{i.o.})=0.$ 这表明对于任意的 $n\in\mathbf N$, $|S_n(\omega)-T_n(\omega)|\leq R(\omega)<\infty\ \text{a.s.}$
    \end{proof}
    \begin{yl}\label{yl:1}
      $\mathop{\sum}\limits_{k=1}^\infty\frac{\text{Var}(Y_k)}{k^2}\leq 4E|X_1|<\infty.$
