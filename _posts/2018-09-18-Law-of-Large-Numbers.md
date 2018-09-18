@@ -36,40 +36,53 @@ $$
 
   则称 $X,Y$ 不相关. 若 $E(XY)=0$, 则称 $X,Y$ 正交.
 
-   若 $\{X_n:n\in N\}$ 为两两不相关随机变量序列, 则
-   \begin{align}\label{eq:12}
+  若 $\{X_n:n\in N\}$ 为两两不相关随机变量序列, 则
+
+  $$
    \text{Var}(X_1+X_2+\cdots+X_n)=\text{Var}(X_1)+\text{Var}(X_2)+\cdots+\text{Var}(X_n).
-   \end{align}
+  $$
+
    事实上, 令 $\mu_i=EX_i, S_n=\sum_{i=1}^{n}X_i.$ 有
-   \begin{align*}
-   \text{Var}(S_n)&=E(S_n-ES_n)^2=E\left(\sum_{i=1}^{n}(X_i-\mu_i)\right)^2\\
+   
+  $$
+   \begin{aligned}
+    \text{Var}(S_n)&=E(S_n-ES_n)^2=E\left(\sum_{i=1}^{n}(X_i-\mu_i)\right)^2\\
    &=\sum_{i=1}^{n}E(X_i-\mu_i)^2+2\sum_{i=1}^{n}\sum_{j=1}^{i-1}E((X_i-\mu_i)(X_j-\mu_j)).
-   \end{align*}
-   上式结果中的第一项为 $\text{Var}(X_1)+\text{Var}(X_2)+\cdots+\text{Var}(X_n)$, 所以只需要说明第二项为 0. 由于 $X_i$ 与 $X_j$ 是不相关的, 故
-   \begin{align*}
+   \end{aligned}
+  $$
+
+  上式结果中的第一项为 $\text{Var}(X_1)+\text{Var}(X_2)+\cdots+\text{Var}(X_n)$, 所以只需要说明第二项为 0. 由于 $X_i$ 与 $X_j$ 是不相关的, 故
+   
+  $$
+   \begin{aligned}
    E((X_i-\mu_i)(X_j-\mu_j))&=EX_iX_j-\mu_iEX_j-\mu_jEX_i+\mu_i\mu_j\\
    &=EX_iX_j-\mu_i\mu_j=0.
-   \end{align*}
-   也就是说, 对于不相关的随机序列, 随机变量和的方差等于每个随机变量方差的和.
+   \end{aligned}
+  $$
 
-   结合 (\ref{eq:11}) 式与 (\ref{eq:12}) 式立得 $L^2$ 收敛下的弱大数定律.
-   \begin{dl}[ Chebyshev 大数定理]\label{chebshev}
-     若 $\{X_n:n\in N\}$ 两两不相关, $\mathbf E S_n$ 存在且 $\mathop{\sup}\limits_n \text{Var} (X_n)<\infty$, 则
-     \[
+  也就是说, 对于不相关的随机序列, 随机变量和的方差等于每个随机变量方差的和.
+
+  结合 (\ref{eq:11}) 式与 (\ref{eq:12}) 式立得 $L^2$ 收敛下的弱大数定律.
+
+  **定理：**(Chebyshev 大数定理) 若 $\{X_n:n\in N\}$ 两两不相关, $\mathbf E S_n$ 存在且 $\mathop{\sup}\limits_n \text{Var} (X_n)<\infty$, 则
+  
+  $$
      \frac{S_n-ES_n}{n}\xrightarrow{2}0,
-     \]
-     因而
-     \[
+  $$
+  
+  因而
+  
+  $$
      \frac{S_n-ES_n}{n}\xrightarrow{\textbf P}0.
-     \]
-   \end{dl}
-   \begin{proof}
-     因为 $\mathbf E(S_n)<\infty$, 令 $\mu:=\frac{\mathbf E S_n}{n}$. 所以 $\mathbf Exists C\in\mathbf R$,
-     \[
+  $$
+
+  **证明：** 因为 $\mathbf E(S_n)<\infty$, 令 $\mu:=\frac{\mathbf E S_n}{n}$. 所以 $\exists C\in\mathbb R$,
+  
+  $$
      E(S_n/n-\mu)^2=\text{Var}(S_n/n)=\frac{1}{n^2}(\text{Var}(X_1)+\cdots+\text{Var}(X_n))\leq\frac{Cn}{n^2}\xrightarrow 2 0,
-     \]
-     从而根据定理 \ref{dl:2}(3), 依概率收敛也正确.
-   \end{proof}
+  $$
+  
+  从而根据定理 \ref{dl:2}(3), 依概率收敛也正确.
 
    上述定理中极为重要的一种特殊情况是： $X_1,X_2,\cdots$ 为独立同分布序列. 简单地说, 上面定理告诉我们, 当 $EX_i^2<\infty$ 时, $S_n/n$ 依概率收敛到 $X_i$ 的均值.
   \subsection{ Khinchin 大数定理}
@@ -123,10 +136,10 @@ $$
    \begin{yl}
      设 $\{X_n:n\in N\},\{Y_n:n\in N\}$ 为尾等价的两个随机变量列, 则
      \begin{enumerate}[(1)]
-       \item $\mathop{\sum}\limits_{n=1}^{\infty}(X_n-Y_n)\ \as$ 收敛；
+       \item $\mathop{\sum}\limits_{n=1}^{\infty}(X_n-Y_n)\ \text{a.s.}$ 收敛；
        \item $\forall \{a_n\}\subset \mathbf{R}_+, a_n\rightarrow \infty$,
        \[
-       \frac{1}{a_n}\sum_{k=1}^{n}(X_k-Y_k)\rightarrow0,\ \as,
+       \frac{1}{a_n}\sum_{k=1}^{n}(X_k-Y_k)\rightarrow0,\ \text{a.s.},
        \]
        因而也依概率收敛于0；
        \item 以概率1, $\sum X_n$ 与 $\sum Y_n$, $\frac{1}{a_n}\sum X_n$ 与 $\frac{1}{a_n}\sum Y_n$ 以同样的方式收敛或者发散；
@@ -153,7 +166,7 @@ $$
      \end{align}
      (\ref{eq:21}) 式右边第二项
      \begin{align}\label{eq:23}
-     \mathbf P(S_n\neq S_n')&\leq\mathbf P(\mathbf Exists k\  \text{s.t.\ } X_k\neq X_{nk})\\
+     \mathbf P(S_n\neq S_n')&\leq\mathbf P(\exists k\  \text{s.t.\ } X_k\neq X_{nk})\\
      &\leq\sum_{k=1}^{n}\mathbf P(X_k\neq X_{nk})=n\mathbf P(|X_1|>n)\rightarrow 0, \ \ n\rightarrow\infty,
      \end{align}
      (\ref{eq:21}) 式右边第一项由 Chebyshev 不等式知
@@ -175,7 +188,7 @@ $$
      \mathbf P(|X_{n1}|>y)&=\mathbf P(|X_{n1}|>n)+\mathbf P(n\geq|X_{n1}|>y)\\
      &=\mathbf P(|X_1|\in (y,n])\leq\mathbf P(|X_1|>y).
      \end{align*}
-     由假设知, $\forall\delta>0,\mathbf Exists y_0>0$, 使当 $y\geq y_0$ 时, $y\mathbf P(|X_1|>y)<\delta$, 于是 $\forall n>y_0$,
+     由假设知, $\forall\delta>0,\exists y_0>0$, 使当 $y\geq y_0$ 时, $y\mathbf P(|X_1|>y)<\delta$, 于是 $\forall n>y_0$,
      \begin{align*}
      \frac{\mathbf E X_{n1}^2}{2n}&\leq\frac{1}{n}\int_0^{y_0}y\mathbf P(|X_1|>y)dy+\frac{1}{n}\int_{y_0}^ny\mathbf P(|X_1|>y)dy\\
      &\leq\frac{y_0}{n}\sup_{0\leq y\leq y_0}[y\mathbf P(|X_1|>y)]+\delta.
@@ -281,7 +294,7 @@ $$
      令 $Y_k=X_kI_{\{|X_k|\leq k\}}, T_n=Y_1+Y_2+\cdots+Y_n$. 则 $\frac{T_n}{n}\xrightarrow{a.s.}\mu.$
    \end{yl}
    \begin{proof}
-     $\mathop{\sum}\limits_{k=1}^\infty\mathbf P(|X_k|>k)\leq\int_0^\infty\mathbf P(|X_1|>t)dt=E|X_1|<\infty$, 所以 $\mathbf P(X_k\neq Y_k\ \io)=0.$ 这表明对于任意的 $n\in\mathbf N$, $|S_n(\omega)-T_n(\omega)|\leq R(\omega)<\infty\ \as$
+     $\mathop{\sum}\limits_{k=1}^\infty\mathbf P(|X_k|>k)\leq\int_0^\infty\mathbf P(|X_1|>t)dt=E|X_1|<\infty$, 所以 $\mathbf P(X_k\neq Y_k\ \io)=0.$ 这表明对于任意的 $n\in\mathbf N$, $|S_n(\omega)-T_n(\omega)|\leq R(\omega)<\infty\ \text{a.s.}$
    \end{proof}
    \begin{yl}\label{yl:1}
      $\mathop{\sum}\limits_{k=1}^\infty\frac{\text{Var}(Y_k)}{k^2}\leq 4E|X_1|<\infty.$
@@ -361,7 +374,7 @@ $$
     对于矩的要求& 二阶矩存在 & 一阶矩存在 & - & 一阶矩存在\\
     对序列的要求& 仅要求不相关 & i.i.d. & i.i.d.&i.i.d.\\
     其他条件 &- &- &$\mathop{\lim}\limits_{x\rightarrow\infty}x\mathbf P(|X_1|>x)=0$ &-\\
-    收敛方式& $\xrightarrow\mathbf P$ & $\xrightarrow\mathbf P$ & $\xrightarrow\mathbf P$ & $\xrightarrow\as$\\
+    收敛方式& $\xrightarrow\mathbf P$ & $\xrightarrow\mathbf P$ & $\xrightarrow\mathbf P$ & $\xrightarrow\text{a.s.}$\\
     \hline
   \end{tabular}}
   \caption{几种不同大数定律对比}\label{jzbtdsdldb}
