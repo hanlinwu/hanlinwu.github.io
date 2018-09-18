@@ -87,10 +87,10 @@ $$
 ### Khinchin 大数定理
   Chebyshev 大数定理的核心结论仅仅与 $X_n$ 有关, 但是条件却涉及到了二阶矩, 于是我们希望这个假设可以去掉. 事实上, 二阶矩有限的条件不是必需的, 这样就有了 Khinchin 大数定理.
 
-  **定理：** (Khinchin 大数定理) 设 $\{X_n:n\in N\}$ 为独立同分布序列且 $\mathbf E|X_1|<\infty$, 令 $S_n:=\sum_{k=1}^{n}X_k$, 则
+  **定理：** (Khinchin 大数定理) 设 $\{X_n:n\in N\}$ 为独立同分布序列且 $\mathbf E\mid X_1\mid <\infty$, 令 $S_n:=\sum_{k=1}^{n}X_k$, 则
 
   $$
-    \frac{S_n}{n}\xrightarrow\mathbf P \mathbf E X_1.
+    \frac{S_n}{n}\xrightarrow{\mathbf P} \mathbf E X_1.
   $$
 
   在 Khinchin 大数定理中, 将二阶矩有限的条件减弱到了一阶矩有限. 令人惊奇的是, 我们甚至可以将一阶矩有限的条件去掉, 得到一个更强的结论. 我们将先证明下面这个定理, 然后则不难给出 Khinchin 大数定理的证明.
@@ -109,7 +109,7 @@ $$
 
 ## 强大数定律
 
-  **定理：**(强大数定律) 设 $X_1,X_2,\cdots$ 是独立同分布随机变量序列, 且 $E|X_i|<\infty$. 令 $EX_1=\mu, S_n=X_1+X_2+\cdots X_n$. 那么 
+  **定理：**(强大数定律) 设 $X_1,X_2,\cdots$ 是独立同分布随机变量序列, 且 $E\mid X_i\mid <\infty$. 令 $EX_1=\mu, S_n=X_1+X_2+\cdots X_n$. 那么 
     
   $$\frac{S_n}{n}\xrightarrow{a.s.}\mu,\ \ n\rightarrow\infty.$$
 
@@ -146,7 +146,7 @@ $$
   故 $\{X_k\}$ 满足“精确的弱大数定律”, 但是其一阶矩却不存在. 事实上, 广义积分
   
   $$
-   \int_2^\infty\frac{dx}{x\log x}\xlongequal{t=\log x}\int_{\log 2}^{+\infty}\frac{dt}{t}
+   \int_2^\infty\frac{dx}{x\log x}=\int_{\log 2}^{+\infty}\frac{dt}{t}
   $$
 
   发散, 故
