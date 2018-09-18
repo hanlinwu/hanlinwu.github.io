@@ -24,7 +24,7 @@ $$
  
 ### Chebyshev 大数定理
 
-  首先考虑古典意义下的弱大数定律. 假设 $\mathbf E S_n<\infty$, 如果 $\frac{S_n}{n}\xrightarrow 2 \frac{\mathbf E S_n}{n}$, 便可以得到 $\frac{S_n}{n}\xrightarrow\mathbf P \frac{\mathbf E S_n}{n}$. 由于
+  首先考虑古典意义下的弱大数定律. 假设 $\mathbf E S_n<\infty$, 如果 $\frac{S_n}{n}\xrightarrow 2 \frac{\mathbf E S_n}{n}$, 便可以得到 $\frac{S_n}{n}\xrightarrow{\mathbf P} \frac{\mathbf E S_n}{n}$. 由于
    
   $$\frac{S_n}{n}\xrightarrow2 \frac{\mathbf E S_n}{n}\Leftrightarrow\frac{\text{Var} (S_n)}{n^2}\rightarrow 0,$$
 
@@ -95,7 +95,7 @@ $$
 
   在 Khinchin 大数定理中, 将二阶矩有限的条件减弱到了一阶矩有限. 令人惊奇的是, 我们甚至可以将一阶矩有限的条件去掉, 得到一个更强的结论. 我们将先证明下面这个定理, 然后则不难给出 Khinchin 大数定理的证明.
 
-  **定理：** 设 $X_n:n\in N$ 为独立同分布序列, $S_n:=\sum_{k=1}^{n}X_k$, 则 $\{X_n:n\in \mathbf N\}$ 满足弱大数定律（即存在 $\{a_n\}\subset\mathbf R$ 使 $\frac{S_n}{n}-a_n\rightarrow 0$）的充要条件是
+  **定理：**(精确的弱大数定律) 设 $X_n:n\in N$ 为独立同分布序列, $S_n:=\sum_{k=1}^{n}X_k$, 则 $\{X_n:n\in \mathbf N\}$ 满足弱大数定律（即存在 $\{a_n\}\subset\mathbf R$ 使 $\frac{S_n}{n}-a_n\rightarrow 0$）的充要条件是
   
   $$
     \lim_{x\rightarrow\infty}x\mathbf P(|X_1|>x)=0.
@@ -117,7 +117,7 @@ $$
   
 ## 几个不同大数定律的区别与联系
 
-前文我们讨论了几种常见的大数定律. 其中定理 \ref{dl:prexinqin} 和定理 \ref{dl:qdsdl} 是最严格, 同样也是最精妙的结果. 它们成立的条件不仅仅是充分的, 也是必要条件. 这里我们不妨分别称它们为：“精确的弱大数定律”、“精确的强大数定律”.
+前文我们讨论了几种常见的大数定律. 其中精确地弱大数定律和精确地强大数定律是最严格, 同样也是最精妙的结果. 它们成立的条件不仅仅是充分的, 也是必要条件. 
 
 下表展示了几种不同的大数定律的区别与联系.
 
@@ -126,18 +126,18 @@ $$
   | 对于矩的要求 | 二阶矩存在 | 一阶矩存在 | 一阶矩存在 |
   |对序列的要求  | 仅要求不相关 | i.i.d. | i.i.d.| i.i.d.|
   | 其他条件     |   -       |     -    | $\mathop{\lim}\limits_{x\rightarrow\infty}x\mathbf P(\mid X_1\mid >x)=0$ |  -   |
-  | 收敛方式    |  $\xrightarrow\mathbf P$ | $\xrightarrow\mathbf P$ | $\xrightarrow\mathbf P$ | $\xrightarrow\text{a.s.}$
+  | 收敛方式    |  依概率 | 依概率 | 依概率 | 几乎必然 |
 
 
   从 Chebyshev 大数定理到 Khinchin 大数定理, 将二阶矩有限的条件减弱为了一阶矩有限, 当然代价是要求序列为独立同分布.
 
   此时, 我们找到了一个和原序列“差不多”的截尾序列, 这个新序列的二阶矩虽然也未必是有限的, 但是通过原序列一阶矩有限的条件, 容易证明这个截尾后的序列和 $S_n'$ 满足 $S_n'/n$ 收敛(利用原序列一阶矩有限的条件). 最后, 正是独立同分布的性质, 保证了可以利用截尾后的序列来反映原序列的性质.
 
-  Khinchin 大数定理与“精确的弱大数定理”的区别在于把一阶矩有限的条件换成了 $\lim\limits_{x\rightarrow\infty}x\mathbf P(\mid X_1\mid >x)=0$. 这两个条件的共同点是：要求 “$|X_1|$ 很大”的概率要足够的小, 下面这个例子可以说明, 确实有随机变量序列, 满足“精确的弱大数定律”, 但其一阶矩不存在.
+  Khinchin 大数定理与“精确的弱大数定理”的区别在于把一阶矩有限的条件换成了 $\lim\limits_{x\rightarrow\infty}x\mathbf P(\mid X_1\mid >x)=0$. 这两个条件的共同点是：要求 “$\mid X_1\mid $ 很大”的概率要足够的小, 下面这个例子可以说明, 确实有随机变量序列, 满足“精确的弱大数定律”, 但其一阶矩不存在.
 
   **例子：** 令 $X_1,X_2,\cdots$ 是独立同分布序列, 且 $\mathbf P(X_i=(-1)^kk)=\frac{C}{k^2\log k}, k\geq 2$, 其中 $C$ 是一个常数令概率和为 1.
 
-  分析可知
+  **证明：** 分析可知
 
   $$
      \lim\limits_{x\rightarrow\infty}x\mathbf P(|X_1|>x)=\lim\limits_{n\rightarrow\infty}n\sum_{k=n}^\infty\frac{C}{k^2\log k}=0.
