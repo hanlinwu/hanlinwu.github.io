@@ -289,3 +289,6 @@ $$\begin{aligned}
 因此, $$\lim_{n\uparrow\infty}X_n=t \ \ \text{a.s.}$$. $$\square$$
 
 > **另一种证法请参考[李增沪. 随机过程引论[M]. 2014] 第92页.** 但得到的结论比这个定理弱.
+
+
+<!--more-->
