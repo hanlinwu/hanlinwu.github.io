@@ -1,7 +1,7 @@
 ---
 title: 分枝随机游动
 tags:
- - 随机过程呢
+ - 随机过程
 key : branching-random-walks
 mathjax: true
 ---
@@ -25,7 +25,7 @@ $$
 $$
 
 为$E$上的测度, 称之为$X$的强度. 特别地, 有如下普瓦松随机测度的定义：
-![pic1](../assets/images/branching-random-walks/pic1.jpg)
+![pic1](/assets/images/branching-random-walks/pic1.jpg)
 
 ### 分枝随机游动的定义
 
@@ -35,7 +35,7 @@ $$
 - 系统无限地进行下去. 
 - 我们通常假设, 第$n$代中的每个粒子产生后代时, 与$n$代的其他粒子独立, 且与前$n-1$代独立. 
 
-![pic2](../assets/images/branching-random-walks/pic2.jpg)
+![pic2](/assets/images/branching-random-walks/pic2.jpg)
 
 上图为一个分枝随机游动的示意图, **注意：可能在一个位置有多个粒子.** 如果我们只关心每一代中的例子个数而不关心它们所在的位置, 那么就退化成了G-W过程. 其分枝机制为$N:=\# \Xi$. 
 
@@ -58,7 +58,7 @@ $$
 令$S_0:=0$, $(S_n-S_{n-1}:n\geq 1)$是一列独立同分布的随机变量序列, 满足对于任何的可测函数$h:\mathbb R\rightarrow [0,\infty)$,
 
 $$
-    \mathbf E[h(S_1)]=\frac{\mathbf E[\sum_{\mid x\mid =1}e^{-tV(x)}h(V(x))]}{\mathbf E [\sum_{\mid x\mid =1 e^{-t V(x)}}]},
+    \mathbf E[h(S_1)]=\frac{\mathbf E[\sum_{\mid x\mid =1}e^{-tV(x)}h(V(x))]}{\mathbf E [\sum_{\mid x\mid =1} e^{-t V(x)}]},
 $$
 
 如果用点过程的记号, 上式可以表达成
@@ -66,6 +66,8 @@ $$
 $$
     \mathbf E[h(S_1)]=\frac{\mathbf E[\sum_{u\in\Xi}e^{-tu}h(u)]}{\mathbf E[\sum_{u\in\Xi}e^{-tu}]}.
 $$
+
+> 问题： $S_1$的存在性？
 
 **定理1.1** (Many-to-One) 假设$t>0$满足$\psi(t)<\infty$. 对于任意的$n>1$和可测函数$g:\mathbb R^n\rightarrow [0,\infty)$, 有
 
@@ -75,7 +77,15 @@ $$
 
 **证明** 用归纳法证明. 对于$n=1$, 
 
-
+$$
+\begin{aligned}
+    \mathbf E [e^{S_1+\psi(t)}g(S_1)]& =\mathbf E[e^{tS_1}g(S_1)]\mathbf{E}\left(\sum_{\mid x\mid =1}e^{-tV(x)}\right) \\
+   (令 h(x)=e^{tx}g(x))& =  \mathbf E[h(S_1)]\mathbf{E}\left(\sum_{\mid x\mid =1}e^{-tV(x)}\right) \\
+   (由S_1的定义)&= \mathbf E\left(\sum_{\mid x\mid=1}e^{-tV(x)}h(V(x))\right)\\
+   &= \mathbf E\left(\sum_{\mid x\mid=1} g(V(x))\right).
+\end{aligned}
+$$
+即得欲证等式. 设对于某个$n$结论成立, 
 
 $\square$
 ## 1.4 应用：最左位置的速度
