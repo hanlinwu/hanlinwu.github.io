@@ -13,7 +13,3 @@ mathjax: true
 ![pic4](/assets/images/brownian_local_time/4.jpg)
 ![pic5](/assets/images/brownian_local_time/5.jpg)
 ![pic6](/assets/images/brownian_local_time/6.jpg)
-
-<!--more-->
-
-说明文字
