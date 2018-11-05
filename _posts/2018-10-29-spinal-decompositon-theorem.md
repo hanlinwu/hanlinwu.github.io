@@ -6,8 +6,6 @@ tags:
 key : spinal-decomposition-theorem
 mathjax: true
 ---
-# Spinal Decomposition Theorem
-
 ## 背景介绍
 
 ### 1 分枝过程
@@ -31,7 +29,7 @@ mathjax: true
 
 - Many-to-One 公式
 
-$$\mathbf E\left[\sum_{\midx\mid=n} g(V(x_1),\cdots,V(x_n))\right]=\mathbf E\left[e^{t s_n+n\psi(t)}g(S_1,\cdots,S_n)\right]$$
+$$\mathbf E\left[\sum_{\mid x\mid=n} g(V(x_1),\cdots,V(x_n))\right]=\mathbf E\left[e^{t s_n+n\psi(t)}g(S_1,\cdots,S_n)\right]$$
 ### 3 主要目的
 
 - 在分枝随机游动中进行类似的测度变换, 使得过程不灭绝的概率为 $1$, 并给直观解释. 
@@ -43,18 +41,3 @@ $$\mathbf E\left[\sum_{\midx\mid=n} g(V(x_1),\cdots,V(x_n))\right]=\mathbf E\lef
 - 然后介绍测度变换；
 - 给出 Spine Decomposition 定理；
 - 最后给出其应用；
-
-<!-->
-## 1 带有 Spine 的分枝随机游动
-
-- 分支随机游动 $V:=(V(x),x\in \mathbb T)$ 可以看做是 marked trees. 其中 $\mathbb T$ 为 tree. 
-- **Spine:** 一条射线 $w=(w_n,n\geq 0)$, 满足 $w_0=\varnothing$, $\overleftarrow{w_n}=w_{n-1}, n\geq 1$. 
-- $\mathscr F_n:=\sigma\{V(x),x\in \mathbb T, \midx\mid\leq n\}$, $\mathscr F_\infty:=\sigma\{V(x),x\in \mathbb T\}$. 一般地, 一条 spine $w$ 不是 $\mathscr F_\infty$ 可测的. 
-
-## 2 调和函数与 Doob's $h$-变换
-
-令 $(V(x))$ 为满足 $\mathbf E[\sum_{\midx\mid=1}e^{-V(x)}]=1$ 的分枝随机游动. 令 $(S_n-S_{n-1})$ 为一列 i.i.d. 随机变量. 其分布满足： 对于任意的 Borel 可测函数 $g:\mathbb R\rightarrow (0,\infty)$, 有
-
-$$\mathbf E[g(S_1-S_0)]=\mathbf E\left[\sum_{\midx\mid=1}g(V(x))e^{-V(x)}\right].$$
-
-<!-->
