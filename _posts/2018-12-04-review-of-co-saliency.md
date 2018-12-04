@@ -1,14 +1,9 @@
-
 ---
 title: Co-saliency Detection
 tags:
  - 图像处理
 key : Co-saliency-Detection
 ---
-
-<h3>
-<a id="Back-pages" class="anchor" href="#Back-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="index.html#Project-page"><ud>Back to Homepage</ud></a> </h3>
-
 <h2>
 <a id="project_title" class="anchor" href="#project_title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Co-saliency Detection</h2>
 
