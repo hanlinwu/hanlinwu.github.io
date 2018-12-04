@@ -4,17 +4,8 @@ tags:
  - 图像处理
 key : Co-saliency-Detection
 ---
-<h2>
-<a id="project_title" class="anchor" href="#project_title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Co-saliency Detection</h2>
-
-
-<div style="text-align: center; display: block; margin-right: auto;">
-<img src="sub_img/cosal_review_img.jpg" border="0" width="600"><br></div><br>
-<hr />
-
 
 <p>Co-saliency detection is used to discover the common saliency on the multiple images. This page provides a paper list of the co-saliency detection. If you have paper to recommend or any suggestions, please feel free to contact me.</p>
-<hr />
 
 <h4>
 <a id="survey-page" class="anchor" href="#survey-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Survey papers: </h4>
@@ -28,7 +19,6 @@ key : Co-saliency-Detection
 <em>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</em>, 2018. 
 <a href="https://arxiv.org/abs/1803.03391" target="_blank">[PDF]</a>  </li>
 </ol>
-<hr />
 
 <h4>
 <a id="list-page" class="anchor" href="#list-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Paper list:</h4>
