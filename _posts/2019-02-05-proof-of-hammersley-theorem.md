@@ -3,9 +3,8 @@ title: Proof of Hammersley Theorem
 tags:
  - 概率图模型
 key : Proof-of-Hammersley-Theorem
+mathjax: true
 ---
-
-# Proof of Hammersley-Clifford Theorem
 
 **定义1** 称无向图模型 $G$ 为马尔科夫随机场(MRF), 如果两个顶点被观测顶点分割情况下条件独立. 即对图中任意顶点$X_i$ ，有
 $$
