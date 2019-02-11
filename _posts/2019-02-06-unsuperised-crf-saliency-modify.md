@@ -16,7 +16,7 @@ mathjax: true
 
 **马尔可夫随机场**：具有马氏性的随机场, 详见[wikipedia](https://en.wikipedia.org/wiki/Markov_random_field).
 
-**条件随机场** ：若 $Y$ 为随机场且在 $\mathbf P(Y|X)$ 下具有马氏性, 则称 $(X,Y)$ 为条件随机场. 详见[wikipedia](https://en.wikipedia.org/wiki/Conditional_random_field).
+**条件随机场** ：若 $Y$ 为随机场且在 $\mathbf P(Y\mid X)$ 下具有马氏性, 则称 $(X,Y)$ 为条件随机场. 详见[wikipedia](https://en.wikipedia.org/wiki/Conditional_random_field).
 
 **Hammersley-Clifford 定理**: 指出了马尔科夫随机场与 Gibbs 分布的等价性，即任意的 MRF 与某 Gibbs 分布等价. 故只需定义 Gibbs 分布中的势函数即可. 
 
