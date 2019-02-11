@@ -8,7 +8,7 @@ mathjax: true
 
 **定义1** 称无向图模型 $G$ 为马尔科夫随机场(MRF), 如果两个顶点被观测顶点分割情况下条件独立. 即对图中任意顶点$X_i$ ，有
 $$
-P(X_i|X_{G\backslash i}) = P(X_i|X_{N_i}) \tag 1
+P(X_i\mid X_{G\backslash i}) = P(X_i\mid X_{N_i}) \tag 1
 $$
 ​$X_{G \backslash i}$ 表示除了 $X_i$ 之外的所有顶点，$X_{N_i}$ 表示 $i$ 的所有邻居顶点, 即所有与 $X_i$ 相连的顶点. 
 
@@ -20,12 +20,10 @@ $$
 
 **定理(Hammersley-Clifford)** ？？
 
-**证明**
-
-设$D_i = N_i \bigcup \{X_i\}$ 是包含$X_i$ 邻居顶点和$X_i$ 本身的集合。从等式(1)的右边开始
+**证明** 首先证明？？, 设 $D_i = N_i \cup \{X_i\}$ 是包含 $X_i$ 邻居顶点和 $X_i$ 本身的集合. 从等式(1)的右边开始
 $$
 \begin{aligned}
-P(X_i|X_{N_i}) &= \frac {P(X_i,X_{N_i})} {P(X_{N_i})} \\
+P(X_i\mid X_{N_i}) &= \frac {P(X_i,X_{N_i})} {P(X_{N_i})} \\
  &=\frac {\sum_{G \backslash D_i} \prod_{c \in C_G} \phi_c(X_c)} {\sum_{x_i} \sum_{G \backslash D_i} \prod_{c \in C_G} \phi_c(X_c)}  
 \end{aligned}\tag 4
 $$
@@ -78,7 +76,7 @@ $$
 
 1. 等式右边的乘积是在s的所有子集上进行的。
 2. 对于s任意子集z, $P(X_z=x_z,X_{G \backslash z} =0)$ 表示属于z的顶点(随机变量取值)与s一致，图中其它顶点给默认值(记做"0")。
-3. 当s集合与z集合顶点个数不同时指数为1，否则为0; $|s|$ 表示集合s中元素(顶点)个数。
+3. 当s集合与z集合顶点个数不同时指数为1，否则为0; $\mid s\mid$ 表示集合s中元素(顶点)个数。
 4. 很显然f是正函数，概率都是非负的。
 5. 只需要需要证明如下两点,即可说明无向图模型的概率$P(X)$ 可以表示为图上所有团的势函数乘积。
 
