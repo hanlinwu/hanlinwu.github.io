@@ -1,5 +1,5 @@
 ---
-title: Awsome Tensorflow [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/jtoy/awesome)
+title: Awsome Tensorflow
 tags:
  - Tensorflow
 key : awsome-tensorflow
@@ -13,24 +13,6 @@ A curated list of awesome TensorFlow experiments, libraries, and projects. Inspi
 TensorFlow is an open source software library for numerical computation using data flow graphs. In other words, the best way to build deep learning models.
 
 More info [here](http://tensorflow.org).
-
-
-
-## Table of Contents
-
-<!-- MarkdownTOC depth=4 -->
-- [Tutorials](#github-tutorials)
-- [Models/Projects](#github-projects)
-- [Powered by TensorFlow](#github-powered-by)
-- [Libraries](#libraries)
-- [Tools/Utilities](#tools-utils)
-- [Videos](#video)
-- [Papers](#papers)
-- [Blog posts](#blogs)
-- [Community](#community)
-- [Books](#books)
-
-<!-- /MarkdownTOC -->
 
 
 <a name="github-tutorials" />
