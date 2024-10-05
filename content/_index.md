@@ -6,18 +6,18 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: "6rem"
+  spacing: "4rem"
 
 sections:
   - block: resume-biography-3
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
-      username: admin
+      username: hlwu
       text: ""
       # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
+      # button:
+      #   text: Download CV
+      #   url: uploads/resume.pdf
     design:
       css_class: dark
       background:
@@ -35,11 +35,9 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        I mainly focus on intelligent processing technology of remote sensing images, and mainly engage in research on restoration of low-quality images. 
         
-        Please reach out to collaborate 😃
+        Recently, I am also interested in the joint processing of multimodal (vision, language) remote sensing data, such as large-scale image-text retrieval and changing captioning.
     design:
       columns: '1'
   - block: collection
@@ -51,8 +49,8 @@ sections:
           - publication
         featured_only: true
     design:
-      view: article-grid
-      columns: 2
+      view: card
+      columns: 1
   - block: collection
     content:
       title: Recent Publications
