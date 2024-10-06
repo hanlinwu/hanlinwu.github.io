@@ -14,10 +14,10 @@ publishDate: "2020-12-21T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["2"]
+publication_types: ["Journal article"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*IEEE Transactions on Geoscience and Remote Sensing*"
+publication: "IEEE Transactions on Geoscience and Remote Sensing"
 publication_short: "*IEEE Trans. Geosci. Remote Sens.*"
 
 abstract: In remote sensing images (RSIs), the visual characteristics of different regions are versatile, which poses a considerable challenge to single image super-resolution (SISR). Most existing SISR methods for RSIs ignore the diverse reconstruction needs of different regions and thus face a serious contradiction between high perception quality and less spatial distortion. The mean square error (MSE) optimization-based methods produce results of unsatisfactory visual quality, while generative adversarial networks (GANs) can produce photo-realistic but severely distorted results caused by pseudotextures. In addition, increasingly deeper networks, although providing powerful feature representations, also face problems of overfitting and occupying too much storage space. In this article, we propose a new saliency-guided feedback GAN (SG-FBGAN) to address these problems. The proposed SG-FBGAN applies different reconstruction principles for areas with varying levels of saliency and uses feedback (FB) connections to improve the expressivity of the network while reducing parameters. First, we propose a saliency-guided FB generator with our carefully designed paired-feedback block (PFBB). The PFBB uses two branches, a salient and a nonsalient branch, to handle the FB information and generate powerful high-level representations for salient and nonsalient areas, respectively. Then, we measure the visual perception quality of salient areas, nonsalient areas, and the global image with a saliency-guided multidiscriminator, which can dramatically eliminate pseudotextures. Finally, we introduce a curriculum learning strategy to enable the proposed SG-FBGAN to handle complex degradation models. Comprehensive evaluations and ablation studies validate the effectiveness of our proposal.

@@ -34,10 +34,10 @@ sections:
     content:
       title: '📚 My Research'
       subtitle: ''
-      text: |-
-        I mainly focus on intelligent processing technology of remote sensing images, and mainly engage in research on restoration of low-quality images. 
-        
-        Recently, I am also interested in the joint processing of multimodal (vision, language) remote sensing data, such as large-scale image-text retrieval and changing captioning.
+      text: |-        
+        My research focuses on super-resolution techniques for remote sensing images, particularly continuous-scale methods, developing lightweight and dynamic models to enhance data quality.
+
+        Another area of interest is multi-modal (vision-language) remote sensing data processing, involving efficient image-text retrieval and change interpretation in large datasets.
     design:
       columns: '1'
   - block: collection
@@ -49,8 +49,8 @@ sections:
           - publication
         featured_only: true
     design:
-      view: card
-      columns: 1
+      view: article-grid
+      columns: 2
   - block: collection
     content:
       title: Recent Publications
