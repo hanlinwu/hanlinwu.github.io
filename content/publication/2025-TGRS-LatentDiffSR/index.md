@@ -1,0 +1,77 @@
+---
+title: "Latent Diffusion, Implicit Amplification: Efficient Continuous-Scale Super-Resolution for Remote Sensing Images"
+authors:
+- hlwu
+- Jiangwei Mo
+- Xiaohui Sun
+- Jie Ma
+date: "2024-10-30"
+doi: ""
+
+# Schedule page publish date (NOT publication's date).
+publishDate: "2024-11-23T00:00:00Z"
+
+# Publication type.
+# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
+# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
+# 7 = Thesis; 8 = Patent
+publication_types: ["Preprint"]
+
+# Publication name and optional abbreviated publication name.
+publication: "*arXiv preprint arXiv:2410.22830*"
+publication_short: "*arXiv preprint arXiv:2410.22830*"
+abstract: RRecent advancements in diffusion models have significantly improved performance in super-resolution (SR) tasks. However, previous research often overlooks the fundamental differences between SR and general image generation. General image generation involves creating images from scratch, while SR focuses specifically on enhancing existing low-resolution (LR) images by adding typically missing high-frequency details. This oversight not only increases the training difficulty but also limits their inference efficiency. Furthermore, previous diffusion-based SR methods are typically trained and inferred at fixed integer scale factors, lacking flexibility to meet the needs of up-sampling with non-integer scale factors. To address these issues, this paper proposes an efficient and elastic diffusion-based SR model (E2DiffSR), specially designed for continuous-scale SR in remote sensing imagery. E2DiffSR employs a two-stage latent diffusion paradigm. During the first stage, an autoencoder is trained to capture the differential priors between high-resolution (HR) and LR images. The encoder intentionally ignores the existing LR content to alleviate the encoding burden, while the decoder introduces an SR branch equipped with a continuous scale upsampling module to accomplish the reconstruction under the guidance of the differential prior. In the second stage, a conditional diffusion model is learned within the latent space to predict the true differential prior encoding. Experimental results demonstrate that E2DiffSR achieves superior objective metrics and visual quality compared to the state-of-the-art SR methods. Additionally, it reduces the inference time of diffusion-based SR methods to a level comparable to that of non-diffusion methods.
+# Summary. An optional shortened abstract.
+summary: 
+
+tags:
+- Remote sensing
+- Supre-resolution
+- Latent diffusion
+- Continuous-scale
+featured: true
+
+# links:
+# - name: ""
+#   url: ""
+url_pdf: 'https://arxiv.org/pdf/2410.22830'
+url_code: 'https://github.com/hanlinwu/E2DiffSR'
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+image:
+  placement: 2
+  caption: 'Flowchart'
+  focal_point: "Center"
+  preview_only: false
+
+# Associated Projects (optional).
+#   Associate this publication with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `internal-project` references `content/project/internal-project/index.md`.
+#   Otherwise, set `projects: []`.
+projects: []
+
+# Slides (optional).
+#   Associate this publication with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides: "example"` references `content/slides/example/index.md`.
+#   Otherwise, set `slides: ""`.
+# slides: example
+---
+<!-- 
+{{% callout note %}}
+Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+{{% /callout %}}
+
+{{% callout note %}}
+Create your slides in Markdown - click the *Slides* button to check out the example.
+{{% /callout %}}
+
+Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). -->
