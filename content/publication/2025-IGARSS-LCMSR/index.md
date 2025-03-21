@@ -28,7 +28,7 @@ tags:
 - Supre-resolution
 - Latent consistency model
 - Single-step diffusion
-featured: true
+featured: false
 
 # links:
 # - name: ""
