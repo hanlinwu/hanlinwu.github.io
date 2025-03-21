@@ -1,5 +1,5 @@
 ---
-title: "SINGLE-STEP LATENT CONSISTENCY MODEL FOR REMOTE SENSING IMAGE SUPER-RESOLUTION"
+title: "Single-Step Latent Consistency Model for Remote Sensing Image Super-Resolution"
 authors:
 - Xiaohui Sun
 - Jiangwei Mo
@@ -18,7 +18,7 @@ publishDate: "2025-03-21T00:00:00Z"
 publication_types: ["Conference paper"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*IGARSS 2025*"
+publication: "*2025 IEEE International Geoscience and Remote Sensing Symposium*"
 publication_short: "*IGARSS 2025*"
 abstract: Recent advancements in diffusion models (DMs) have greatly advanced remote sensing image super-resolution (RSISR). However, their iterative sampling processes often result in slow inference speeds, limiting their application in real-time tasks. To address this challenge, we propose the latent consistency model for super-resolution (LCMSR), a novel single-step diffusion approach designed to enhance both efficiency and visual quality in RSISR tasks. Our proposal is structured into two distinct stages. In the first stage, we pretrain a residual autoencoder to encode the differential information between high-resolution (HR) and low-resolution (LR) images, transitioning the diffusion process into a latent space to reduce computational costs. The second stage focuses on consistency diffusion learning, which aims to learn the distribution of residual encodings in the latent space, conditioned on LR images. The consistency constraint enforces that predictions at any two timesteps along the reverse diffusion trajectory remain consistent, enabling direct mapping from noise to data. As a result, the proposed LCMSR reduces the iterative steps of traditional diffusion models from 50-1000 or more to just a single step, significantly improving efficiency. Experimental results demonstrate that LCMSR effectively balances efficiency and performance, achieving inference times comparable to non-diffusion models while maintaining high-quality output.
 summary: 
