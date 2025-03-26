@@ -31,7 +31,7 @@ featured: true
 # links:
 # - name: ""
 #   url: ""
-url_pdf: 'https://arxiv.org/abs/2409.08582'
+url_pdf: 'https://arxiv.org/pdf/2409.08582'
 url_code: 'https://github.com/hanlinwu/ChangeChat'
 url_dataset: ''
 url_poster: ''
