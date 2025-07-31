@@ -26,7 +26,7 @@ summary:
 
 tags:
 - Remote sensing
-- Supre-resolution
+- Super-resolution
 - Latent diffusion
 - Continuous-scale
 featured: true
