@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en-us" dir="ltr" data-wc-theme-default="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Hanlin Wu (吴瀚霖)" />
+  <meta name="description" content="Personal academic website for Hanlin Wu (吴瀚霖)." />
+
+  <title>Hanlin Wu (吴瀚霖)</title>
+
+  <link rel="stylesheet" href="/css/themes/blue.min.css" />
+  <link rel="stylesheet" href="/dist/wc.min.css" />
+  <link rel="stylesheet" href="/css/custom.min.941f779eeb94abe595169069c8967c94be603aa9e64a0bd0d450e1548596782e.css" />
+
+  <link rel="icon" type="image/png" href="/media/icon_hu3247630877640252165.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4166356570829923896.png" />
+
+  <script>
+    window.hbb = {
+      defaultTheme: document.documentElement.dataset.wcThemeDefault,
+      setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+      setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    };
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+</head>
+
+<body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+  <div id="page-bg"></div>
+
+  <div id="app">
+    <div class="page-header sticky top-0 z-30">
+      <header id="site-header" class="header">
+        <nav class="navbar px-3 flex justify-left">
+          <div class="order-0 h-100">
+            <a class="navbar-brand" :href="site.homeUrl" :title="site.profile.name">
+              {{ site.profile.name }}
+            </a>
+          </div>
+
+          <input id="nav-toggle" type="checkbox" class="hidden" />
+          <label
+            for="nav-toggle"
+            class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+            <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+              <title>Open Menu</title>
+              <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+            </svg>
+            <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+              <title>Close Menu</title>
+              <polygon
+                points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+                transform="rotate(45 10 10)"></polygon>
+            </svg>
+          </label>
+
+          <ul
+            id="nav-menu"
+            class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left">
+            <li v-for="item in site.nav" :key="item.label" class="nav-item">
+              <a class="nav-link" :class="{ active: item.active }" :href="item.href">{{ item.label }}</a>
+            </li>
+          </ul>
+
+          <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+            <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+                [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+              <button class="theme-toggle mt-1" accesskey="t" title="appearance" @click="toggleTheme">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="dark:hidden">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class=" dark:block [&:not(dark)]:hidden">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="page-body">
+      <section id="about" class="relative hbb-section blox-resume-biography-3 dark" style="padding: 2em 0 6em 0;">
+        <div class="home-section-bg bg-image parallax" :style="{ backgroundImage: `url('${site.heroBackground}')` }" style="background-size: cover;background-position: center;filter: brightness(0.3);"></div>
+
+        <div class="resume-biography px-3 flex flex-col md:flex-row justify-center gap-12">
+          <div class="flex-none m-w-[130px] mx-auto md:mx-0">
+            <div id="profile" class="flex justify-center items-center flex-col">
+              <div class="avatar-wrapper mt-10">
+                <img class="avatar rounded-full bg-white dark:bg-gray-800 p-1" :src="site.profile.avatar" :alt="site.profile.name"
+                     width="150" height="150">
+                <span class="avatar-emoji">{{ site.profile.emoji }}</span>
+              </div>
+
+              <div class="portrait-title dark:text-white">
+                <div class="text-3xl font-bold mb-2 mt-6">{{ site.profile.name }}</div>
+                <h3 class="font-semibold mb-1">{{ site.profile.title }}</h3>
+                <div class="mb-2">
+                  <a :href="site.profile.orgUrl" target="_blank" rel="noopener">
+                    <div>{{ site.profile.org }}</div>
+                  </a>
+                </div>
+              </div>
+
+              <ul class="network-icon dark:text-zinc-100">
+                <li v-for="link in site.social" :key="link.label">
+                  <a :href="link.href" :aria-label="link.ariaLabel" :title="link.label" :target="link.target" rel="noopener" v-html="link.icon"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex-auto max-w-prose md:mt-12">
+            <div class="pt-2 justify-content-center prose prose-slate dark:prose-invert">
+              <div class="bio-text" v-html="site.profile.aboutHtml"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 justify-between mt-6 dark:text-gray-300">
+              <div>
+                <div class="section-subheading mb-3">Interests</div>
+                <ul class="list-disc list-inside space-y-1 pl-5">
+                  <li v-for="interest in site.interests" :key="interest">{{ interest }}</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="section-subheading mb-3">Education</div>
+                <ul>
+                  <li v-for="item in site.education" :key="item.degree" class="flex items-start gap-3">
+                    <svg class='flex-shrink-0 w-5 h-5 me-2 mt-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41a60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a51.39 51.39 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                    </svg>
+                    <div class="description">
+                      <p class="course">{{ item.degree }}</p>
+                      <p class="text-sm">{{ item.school }}</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="relative hbb-section blox-markdown" style="padding: 4rem 0 4rem 0;">
+        <div class="home-section-bg"></div>
+        <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+          <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">📚 My Research</div>
+          <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose">
+            <p v-for="item in site.research" :key="item.title">
+              <strong>{{ item.title }}:</strong> {{ item.description }}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="papers" class="relative hbb-section blox-collection" style="padding: 4rem 0 4rem 0;">
+        <div class="home-section-bg"></div>
+        <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+          <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Featured Publications</div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="container px-8 mx-auto xl:px-5 py-5 lg:py-8 max-w-screen-lg">
+            <div class="grid gap-10 md:grid-cols-3 lg:gap-10">
+              <div v-for="paper in site.featuredPublications" :key="paper.title" class="group cursor-pointer">
+                <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+                  <a class="relative block aspect-video" :href="paper.href">
+                    <img :alt="paper.title"
+                         class="object-fill transition-all"
+                         data-nimg="fill"
+                         decoding="async"
+                         loading="lazy"
+                         :src="paper.image"
+                         style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" />
+                  </a>
+                </div>
+                <div>
+                  <div class="flex gap-3">
+                    <span class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">{{ paper.tag }}</span>
+                  </div>
+                  <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white">
+                    <a :href="paper.href">
+                      <span class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">{{ paper.title }}</span>
+                    </a>
+                  </h2>
+                  <div class="flex-none">
+                    <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+                      <time class="truncate text-sm" :datetime="paper.date">{{ paper.dateLabel }}</time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mx-auto max-w-screen-lg px-8 xl:px-5 pb-5 lg:pb-8">
+          <div class="mt-10 flex justify-center">
+            <a
+              class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+              :href="site.publicationsUrl">
+              <span>See all publications</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="funding" class="relative hbb-section blox-markdown" style="padding: 4rem 0 4rem 0;">
+        <div class="home-section-bg"></div>
+        <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+          <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Funding</div>
+          <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose">
+            <div style="padding-top:2rem;font-size:1rem;">
+              <p v-for="item in site.funding" :key="item">{{ item }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+        <p class="powered-by text-center">{{ site.footerText }}</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="/js/vue-app.js"></script>
+</body>
+</html>
