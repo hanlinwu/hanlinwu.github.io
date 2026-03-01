@@ -1,1 +1,75 @@
-{}
+metadata:
+  last_updated: '2026-03-01'
+papers:
+  o4bZgbIAAAAJ:BqipwSGYUEgC:
+    citations: 8
+    title: 'Latent diffusion, implicit amplification: Efficient continuous-scale super-resolution for remote sensing images'
+    year: '2025'
+  o4bZgbIAAAAJ:GnPB-g6toBAC:
+    citations: 0
+    title: 'DeltaVLM: Interactive Remote Sensing Image Change Analysis via Instruction-guided Difference Perception'
+    year: '2025'
+  o4bZgbIAAAAJ:M3NEmzRMIkIC:
+    citations: 24
+    title: Conditional stochastic normalizing flows for blind super-resolution of remote sensing images
+    year: '2023'
+  o4bZgbIAAAAJ:NMxIlDl6LWMC:
+    citations: 1
+    title: 'From Coarse To Fine: An Offline-Online Approach for Remote Sensing Cross-Modal Retrieval'
+    year: '2024'
+  o4bZgbIAAAAJ:NaGl4SEjCO4C:
+    citations: 9
+    title: Blind super-resolution for remote sensing images via conditional stochastic normalizing flows
+    year: '2022'
+  o4bZgbIAAAAJ:O3NaXMp0MMsC:
+    citations: 0
+    title: Single-Step Latent Consistency Model for Remote Sensing Image Super-Resolution
+    year: '2025'
+  o4bZgbIAAAAJ:RGFaLdJalmkC:
+    citations: 0
+    title: "\u8DE8\u5C3A\u5EA6\u8026\u5408\u7684\u8FDE\u7EED\u6BD4\u4F8B\u56E0\u5B50\u56FE\u50CF\u8D85\u5206\u8FA8\u7387"
+    year: '2022'
+  o4bZgbIAAAAJ:YFjsv_pBGBYC:
+    citations: 24
+    title: 'Diffusion-rscc: Diffusion probabilistic model for change captioning in remote sensing images'
+    year: '2025'
+  o4bZgbIAAAAJ:_Qo2XoVZTnwC:
+    citations: 35
+    title: Remote sensing image super-resolution via saliency-guided feedback GANs
+    year: '2020'
+  o4bZgbIAAAAJ:bEWYMUwI8FkC:
+    citations: 10
+    title: Scale-aware dynamic network for continuous-scale super-resolution
+    year: '2021'
+  o4bZgbIAAAAJ:blknAaTinKkC:
+    citations: 25
+    title: 'Changechat: An interactive model for remote sensing change analysis via multimodal instruction tuning'
+    year: '2025'
+  o4bZgbIAAAAJ:e5wmG9Sq2KIC:
+    citations: 4
+    title: 'Sd-fb-gan: saliency-driven feedback gan for remote sensing image super-resolution reconstruction'
+    year: '2020'
+  o4bZgbIAAAAJ:hMod-77fHWUC:
+    citations: 7
+    title: "Toward efficient and accurate remote sensing image\u2013text retrieval with a coarse-to-fine approach"
+    year: '2024'
+  o4bZgbIAAAAJ:iH-uZ7U-co4C:
+    citations: 18
+    title: Lightweight stepless super-resolution of remote sensing images via saliency-aware dynamic routing strategy
+    year: '2023'
+  o4bZgbIAAAAJ:isC4tDSrTZIC:
+    citations: 13
+    title: Hierarchical feature aggregation and self-learning network for remote sensing image continuous-scale super-resolution
+    year: '2021'
+  o4bZgbIAAAAJ:k_IJM867U9cC:
+    citations: 6
+    title: Cosaliency detection and region-of-interest extraction via manifold ranking and MRF in remote sensing images
+    year: '2021'
+  o4bZgbIAAAAJ:maZDTaKrznsC:
+    citations: 29
+    title: Learning dynamic scale awareness and global implicit functions for continuous-scale super-resolution of remote sensing images
+    year: '2023'
+  o4bZgbIAAAAJ:r0BpntZqJG4C:
+    citations: 4
+    title: Deformable alignment and scale-adaptive feature extraction network for continuous-scale satellite video super-resolution
+    year: '2022'
