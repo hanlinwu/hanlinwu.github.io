@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-01-15 00:00:00+0800
+date: 2025-02-01 00:00:00+0800
 inline: true
 related_posts: false
 ---
 
-Received NSFC Youth Science Fund Project grant for research on cognition-inspired super-resolution methods (2025-2027).
+Paper published: "DeltaVLM: Interactive Remote Sensing Image Change Analysis via Instruction-Guided Difference Perception" in **Remote Sensing**, 2026.

@@ -1,13 +1,11 @@
 ---
 layout: page
 permalink: /funding/
-title: funding
+title: Funding
 description: Research grants and funding.
 nav: true
-nav_order: 5
+nav_order: 4
 ---
-
-## Active Grants
 
 - **2025.01-2027.12**, National Natural Science Foundation of China (NSFC) Youth Science Fund Project: Research on Cognition-Inspired Super-Resolution Reconstruction Methods for Remote Sensing Images in Open Scenarios (开放场景下认知启发的遥感影像超分辨率重建方法研究), **PI**
 

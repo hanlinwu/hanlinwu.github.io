@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
+title: Teaching
 description: Courses and teaching materials.
 nav: true
-nav_order: 4
+nav_order: 5
 calendar: false
 ---
 

@@ -36,32 +36,19 @@ cv:
         end_date: 2015
 
     Experience:
-      - company: Beijing Foreign Studies University
+      - company: School of Information Science and Technology, Beijing Foreign Studies University
         position: Lecturer
-        location: School of Information Science and Technology, Beijing, China
+        location: Beijing, China
         start_date: 2022
         end_date: present
 
-      - company: Beijing Normal University
+      - company: Graduate School, Beijing Normal University
         position: Staff Software Engineer
-        location: Graduate School, Beijing, China
+        location: Beijing, China
         start_date: 2015
         end_date: 2017
         highlights:
           - Development of BNU postgraduate degree management system
-
-    Skills:
-      - name: Programming
-        icon: fa-solid fa-code
-        keywords: "Python, PyTorch, Deep Learning, Data Science, SQL"
-
-    Languages:
-      - name: Chinese
-        summary: "Native speaker"
-      - name: English
-        summary: "Fluent"
-      - name: Portuguese
-        summary: "Elementary"
 
     Interests:
       - name: Research

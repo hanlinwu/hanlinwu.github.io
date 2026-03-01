@@ -65,7 +65,7 @@ google_analytics:
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: blog
+blog_name: Blog
 blog_description:
 permalink: /blog/:year/:title/
 lsi: false
@@ -234,6 +234,8 @@ scholar:
   query: "@*"
   group_by: year
   group_order: descending
+  sort_by: year
+  order: descending
 
 enable_publication_badges:
   altmetric: false
@@ -295,6 +297,7 @@ imagemagick:
     - 480
     - 800
     - 1400
+    - 2000
   input_directories:
     - assets/img/
   input_formats:
