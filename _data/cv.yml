@@ -1,0 +1,69 @@
+cv:
+  name: Hanlin Wu (吴瀚霖)
+  label: Lecturer
+  email: hlwu@bfsu.edu.cn
+  location: Beijing, China
+  image: ""
+  summary: Lecturer with the School of Information Science and Technology, Beijing Foreign Studies University. Research interests include computer vision, multimodal machine learning, image restoration, and remote sensing image processing.
+
+  social_networks:
+    - network: GitHub
+      username: hanlinwu
+    - network: Google Scholar
+      username: o4bZgbIAAAAJ
+
+  sections:
+    Education:
+      - institution: Beijing Normal University
+        location: Beijing, China
+        area: Computer Application Technology
+        studyType: Ph.D.
+        start_date: 2019
+        end_date: 2022
+
+      - institution: Beijing Normal University
+        location: Beijing, China
+        area: Probability and Statistics
+        studyType: M.S.
+        start_date: 2017
+        end_date: 2019
+
+      - institution: Beijing Normal University
+        location: Beijing, China
+        area: Statistics
+        studyType: B.S.
+        start_date: 2011
+        end_date: 2015
+
+    Experience:
+      - company: Beijing Foreign Studies University
+        position: Lecturer
+        location: School of Information Science and Technology, Beijing, China
+        start_date: 2022
+        end_date: present
+
+      - company: Beijing Normal University
+        position: Staff Software Engineer
+        location: Graduate School, Beijing, China
+        start_date: 2015
+        end_date: 2017
+        highlights:
+          - Development of BNU postgraduate degree management system
+
+    Skills:
+      - name: Programming
+        icon: fa-solid fa-code
+        keywords: "Python, PyTorch, Deep Learning, Data Science, SQL"
+
+    Languages:
+      - name: Chinese
+        summary: "Native speaker"
+      - name: English
+        summary: "Fluent"
+      - name: Portuguese
+        summary: "Elementary"
+
+    Interests:
+      - name: Research
+        icon: fa-solid fa-tag
+        keywords: "Computer Vision, Multimodal Machine Learning, Image Restoration, Score-based Generative Models, Remote Sensing"

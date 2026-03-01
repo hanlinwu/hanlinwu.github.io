@@ -1,0 +1,27 @@
+"TGRS":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36
+  color: "#00369f"
+
+"GRSL":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8859
+  color: "#2e86c1"
+
+"ICIP":
+  url: https://ieeexplore.ieee.org/
+  color: "#e74c3c"
+
+"IGARSS":
+  url: https://ieeexplore.ieee.org/
+  color: "#27ae60"
+
+"ICASSP":
+  url: https://ieeexplore.ieee.org/
+  color: "#8e44ad"
+
+"RS":
+  url: https://www.mdpi.com/journal/remotesensing
+  color: "#f39c12"
+
+"JIG":
+  url: http://www.cjig.cn/
+  color: "#d35400"

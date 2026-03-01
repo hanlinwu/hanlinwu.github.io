@@ -1,0 +1,100 @@
+{
+  "basics": {
+    "name": "Hanlin Wu (吴瀚霖)",
+    "label": "Lecturer",
+    "image": "",
+    "email": "hlwu@bfsu.edu.cn",
+    "summary": "Lecturer with the School of Information Science and Technology, Beijing Foreign Studies University. Research interests include computer vision, multimodal machine learning, image restoration, and remote sensing image processing.",
+    "location": {
+      "city": "Beijing",
+      "countryCode": "CN"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "hanlinwu",
+        "url": "https://github.com/hanlinwu"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Beijing Foreign Studies University",
+      "position": "Lecturer",
+      "location": "School of Information Science and Technology, Beijing, China",
+      "startDate": "2022-07-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "name": "Beijing Normal University",
+      "position": "Staff Software Engineer",
+      "location": "Graduate School, Beijing, China",
+      "startDate": "2015-07-01",
+      "endDate": "2017-09-01",
+      "summary": "",
+      "highlights": ["Development of BNU postgraduate degree management system"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Beijing Normal University",
+      "location": "Beijing, China",
+      "area": "Computer Application Technology",
+      "studyType": "Ph.D.",
+      "startDate": "2019-09-01",
+      "endDate": "2022-07-01"
+    },
+    {
+      "institution": "Beijing Normal University",
+      "location": "Beijing, China",
+      "area": "Probability and Statistics",
+      "studyType": "M.S.",
+      "startDate": "2017-09-01",
+      "endDate": "2019-07-01"
+    },
+    {
+      "institution": "Beijing Normal University",
+      "location": "Beijing, China",
+      "area": "Statistics",
+      "studyType": "B.S.",
+      "startDate": "2011-09-01",
+      "endDate": "2015-07-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Python", "PyTorch", "Deep Learning", "Data Science"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Chinese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Portuguese",
+      "fluency": "Elementary"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Research",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Computer Vision",
+        "Multimodal Machine Learning",
+        "Image Restoration",
+        "Score-based Generative Models",
+        "Remote Sensing"
+      ]
+    }
+  ]
+}

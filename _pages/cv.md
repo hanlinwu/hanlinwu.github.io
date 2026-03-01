@@ -1,0 +1,12 @@
+---
+layout: cv
+permalink: /cv/
+title: CV
+nav: true
+nav_order: 3
+cv_pdf:
+cv_format: rendercv
+description: Curriculum Vitae of Hanlin Wu.
+toc:
+  sidebar: left
+---

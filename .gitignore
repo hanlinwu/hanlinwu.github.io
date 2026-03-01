@@ -1,12 +1,15 @@
-# IDEs
-.idea/
-
-# Hugo
-resources/
-public/
-jsconfig.json
+_site
+.bundle
+.DS_store
+.idea
+.jekyll-cache
+.jekyll-metadata
+.ruby-version
+.sass-cache
+.tweet-cache
+.venv
+assets/libs/
+assets/rendercv/rendercv_output/*.typ
+Gemfile.lock
 node_modules/
-go.sum
-.hugo_build.lock
-hugo_stats.json
-.DS_*
+vendor

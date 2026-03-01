@@ -1,0 +1,12 @@
+github_users:
+  - hanlinwu
+
+repo_description_lines_max: 2
+
+github_repos:
+  - hanlinwu/SADN
+  - hanlinwu/SalDRN
+  - hanlinwu/BlindSRSNF
+  - hanlinwu/ChangeChat
+  - hanlinwu/DeltaVLM
+  - MoooJianG/LDCSR
