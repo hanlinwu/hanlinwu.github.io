@@ -22,7 +22,7 @@ latest_posts:
   enabled: false
 ---
 
-Hanlin Wu (吴瀚霖) received his B.S. in Statistics and Ph.D. in Computer Application Technology from Beijing Normal University (BNU). After working as a Staff Software Engineer at the Graduate School of BNU (2015-2017), he joined Beijing Foreign Studies University (BFSU) as a Lecturer in 2022.
+Hanlin Wu (吴瀚霖) received his B.S. in Statistics (2015) and Ph.D. in Computer Application Technology (2022) from Beijing Normal University (BNU). He is currently a Lecturer at the School of Information Science and Technology, Beijing Foreign Studies University (BFSU).
 
 He has an academic background in mathematics, probability theory, and computer science. His research interests include:
 
