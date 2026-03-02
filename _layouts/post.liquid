@@ -94,4 +94,8 @@ layout: default
   {% if site.giscus and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}
+  {% assign show_waline = page.waline_comments | default: true %}
+  {% if site.waline.server_url and show_waline and url_beginning == '/blog/' %}
+    {% include waline.liquid %}
+  {% endif %}
 </div>

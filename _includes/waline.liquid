@@ -1,0 +1,29 @@
+{% if site.waline.server_url %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdmirror.com/npm/@waline/client@3/dist/waline.css"
+>
+<div
+  id="waline-comments"
+  style="margin-top: 2rem;"
+></div>
+<script type="module">
+  import { init } from 'https://cdn.jsdmirror.com/npm/@waline/client@3/dist/waline.js';
+  init({
+    el: '#waline-comments',
+    serverURL: '{{ site.waline.server_url }}',
+    lang: '{{ site.waline.lang | default: "zh-CN" }}',
+    dark: 'html[data-theme="dark"]',
+    emoji: [
+      'https://cdn.jsdmirror.com/npm/@waline/emojis@1.1.0/weibo',
+    ],
+  });
+</script>
+{% else %}
+  {% capture waline_warning %}
+> ##### Waline 评论未配置
+> 请在 `_config.yml` 中设置 `waline.server_url` 以启用评论功能。
+{: .block-danger }
+  {% endcapture %}
+  {{ waline_warning | markdownify }}
+{% endif %}
