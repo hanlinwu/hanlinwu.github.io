@@ -19,8 +19,8 @@ course_image: /assets/img/teaching/neural-network-banner.jpg
 
 | 周次 | 日期 | 主题 | 课程资料 | 备注 |
 |:---:|:---:|------|------|------|
-| 1 | 3月7日 | 课程简介 / AI 是如何和你对话的？ | | |
-| 2 | 3月14日 | | | |
+| 1 | 3月7日 | 课程简介 / AI 是如何和你对话的？ | [PDF](/assets/pdf/teaching/1-绪论.pdf) | |
+| 2 | 3月14日 | 龙虾背后的原理 | [PDF](/assets/pdf/teaching/2-龙虾背后的原理.pdf) | |
 | 3 | 3月21日 | | | |
 | 4 | 3月28日 | | | |
 | 5 | 4月4日 | | | |
