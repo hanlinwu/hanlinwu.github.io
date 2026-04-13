@@ -27,10 +27,21 @@ layout: default
           {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          <div class="profile-image-hover-wrapper">
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
+            {% if page.profile.image_hover %}
+              {% assign hover_image_path = page.profile.image_hover | prepend: 'assets/img/' %}
+              <div class="profile-image-hover-overlay">
+                {%
+                  include figure.liquid loading="lazy" path=hover_image_path class=profile_image_class sizes=sizes alt="cartoon avatar"
+                  cache_bust=true
+                %}
+              </div>
+            {% endif %}
+          </div>
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>

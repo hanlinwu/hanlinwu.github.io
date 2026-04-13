@@ -7,6 +7,7 @@ subtitle: Lecturer, School of Information Science and Technology, <a href='https
 profile:
   align: right
   image: prof_pic.jpg
+  image_hover: hanlinwu.png
   image_circular: false
 
 selected_papers: true
