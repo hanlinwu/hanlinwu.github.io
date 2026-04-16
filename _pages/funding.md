@@ -7,6 +7,8 @@ nav: true
 nav_order: 4
 ---
 
+- **2026.03-2029.03**, Beijing Foreign Studies University: Research on Multi-Agent Collaborative Heterogeneous Degraded Image Restoration Methods (多智能体协同的异质退化图像恢复方法研究), **PI**
+
 - **2025.01-2027.12**, National Natural Science Foundation of China (NSFC) Youth Science Fund Project: Research on Cognition-Inspired Super-Resolution Reconstruction Methods for Remote Sensing Images in Open Scenarios (开放场景下认知启发的遥感影像超分辨率重建方法研究), **PI**
 
 - **2024.06-2027.06**, Beijing Foreign Studies University Academic Youth Innovation Team Project: Research on Core Value Alignment of Generative Large Language Models (生成式大语言模型的核心价值观对齐研究), Participant
