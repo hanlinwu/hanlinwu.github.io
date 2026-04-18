@@ -21,11 +21,11 @@ course_image: /assets/img/teaching/neural-network-banner.jpg
 |:---:|:---:|------|------|------|
 | 1 | 3月7日 | 课程简介 / AI 是如何和你对话的？ | [PDF](/assets/teaching/nndl-2026/1-绪论.pdf) | |
 | 2 | 3月14日 | 龙虾背后的原理 | [PDF](/assets/teaching/nndl-2026/2-龙虾背后的原理.pdf) | |
-| 3 | 3月21日 | 深入上下文工程 | [PDF](assets/teaching/nndl-2026/3-ContextEngineering.pdf) | |
-| 4 | 3月28日 | 大语言模型的工作原理 | [PDF](assets/teaching/nndl-2026/4-LLM的工作原理.pdf) | |
-| 5 | 4月4日 | 深度学习的基本概念 | [PDF](assets/teaching/nndl-2026/5-深度学习的基本概念.pdf) | |
+| 3 | 3月21日 | 深入上下文工程 | [PDF](/assets/teaching/nndl-2026/3-ContextEngineering.pdf) | |
+| 4 | 3月28日 | 大语言模型的工作原理 | [PDF](/assets/teaching/nndl-2026/4-LLM的工作原理.pdf) | |
+| 5 | 4月4日 | 深度学习的基本概念 | [PDF](/assets/teaching/nndl-2026/5-深度学习的基本概念.pdf) | |
 | 6 | 4月11日 | 实验课 | | |
-| 7 | 4月18日 | 大语言模型是如何被训练的 | [PDF](assets/teaching/nndl-2026/7-LLM的训练.pdf) | |
+| 7 | 4月18日 | 大语言模型是如何被训练的 | [PDF](/assets/teaching/nndl-2026/7-LLM的训练.pdf) | |
 | 8 | 4月25日 | | | |
 | 9 | 5月2日 | | | |
 | 10 | ~~5月9日~~ | | | 劳动节放假 |
