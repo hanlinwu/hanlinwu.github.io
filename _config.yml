@@ -244,7 +244,7 @@ scholar:
 
 enable_publication_badges:
   altmetric: false
-  dimensions: true
+  dimensions: false
   google_scholar: true
   inspirehep: false
 
@@ -383,7 +383,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.loli.net/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: ""
   highlightjs:
     integrity:
       css:
