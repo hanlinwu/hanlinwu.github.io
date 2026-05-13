@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx astro add:*)",
+      "Bash(node scripts/migrate-publications.js:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run update-citations:*)",
+      "Bash(ls -d /Users/hlwu/Documents/hanlinwu.github.io/content/publication/*/)",
+      "Bash(file /Users/hlwu/Documents/hanlinwu.github.io/assets/img/publication_preview/*.png)",
+      "WebFetch(domain:speech.ee.ntu.edu.tw)",
+      "Bash(identify /Users/hlwu/Documents/hanlinwu.github.io/assets/img/prof_pic.png)",
+      "Bash(sips -g all /Users/hlwu/Documents/hanlinwu.github.io/assets/img/prof_pic.png)",
+      "Bash(git push origin master)",
+      "Bash(curl -sI \"https://jsd.cdn.zzko.cn/npm/jquery@3.6.0/dist/jquery.min.js\")",
+      "Bash(curl -sI \"https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js\")",
+      "Bash(curl -sI -L \"https://jsd.cdn.zzko.cn/npm/jquery@3.6.0/dist/jquery.min.js\")",
+      "Bash(curl -sL \"https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js\")",
+      "Bash(openssl dgst -sha256 -binary)",
+      "Bash(curl -sL \"https://jsd.cdn.zzko.cn/npm/jquery@3.6.0/dist/jquery.min.js\")",
+      "Bash(curl -sL \"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js\")",
+      "Bash(curl -sL \"https://jsd.cdn.zzko.cn/npm/mathjax@3.2.2/es5/tex-mml-chtml.js\")",
+      "Bash(curl -sL \"https://cdn.jsdmirror.com/npm/mathjax@3.2.2/es5/tex-mml-chtml.js\")",
+      "Bash(bundle exec:*)",
+      "Bash(gem install:*)",
+      "Bash(bundle update:*)",
+      "Bash(jekyll serve:*)",
+      "Bash(brew --prefix ruby)",
+      "Bash(export PATH=\"/opt/homebrew/opt/ruby/bin:$PATH\")",
+      "Bash(export GEM_HOME=\"/Users/hlwu/.gem/ruby/3.4.0\")",
+      "Bash(export PATH=\"/opt/homebrew/opt/ruby/bin:/opt/homebrew/bin:$PATH\")",
+      "Bash(bundle install:*)",
+      "Bash(/opt/homebrew/opt/ruby/bin/ruby -v)",
+      "Bash(ruby -v)",
+      "Bash(git checkout:*)",
+      "Bash(gem list:*)"
+    ]
+  }
+}
