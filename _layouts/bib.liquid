@@ -25,18 +25,19 @@
           <abbr class="badge rounded {% if entry.preview %}w-100{% endif %}">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
-      {% if entry.preview %}
+      {% if entry.preview and entry.preview != blank %}
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
         {% else %}
           {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
           {%
             include figure.liquid
-            loading="eager"
+            loading="lazy"
             path=entry_path
             class="preview z-depth-1 rounded"
             zoomable=true
-            avoid_scaling=true
+            zoom_src=entry_path
+            sizes="(min-width: 576px) 160px, 35vw"
             alt=entry.preview
           %}
         {% endif %}
@@ -339,10 +340,7 @@
                 {% endfor %}
               {% endif %}
 
-              <img
-                src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige"
-                alt="{{ citation_count }} Google Scholar citations"
-              >
+              <span class="citation-badge" aria-label="{{ citation_count }} Google Scholar citations">scholar {{ citation_count }}</span>
             </a>
           {% endif %}
           {% if site.enable_publication_badges.inspirehep and entry_has_inspirehep_badge %}

@@ -11,7 +11,7 @@ description: >
   Academic homepage of Hanlin Wu (吴瀚霖). Research on remote sensing image super-resolution, multimodal vision-language learning, and interactive change analysis.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Hosted by <a href="https://cloud.tencent.com/product/cdn" target="_blank">Tencent Cloud CDN</a>.
 keywords: remote sensing, super-resolution, vision-language, change detection, academic-website
 lang: en
 timezone: Asia/Shanghai
@@ -327,8 +327,8 @@ enable_openpanel_analytics: false
 enable_google_verification: false
 enable_bing_verification: false
 enable_cookie_consent: false
-enable_masonry: true
-enable_math: true
+enable_masonry: false
+enable_math: false
 enable_tooltips: false
 enable_darkmode: true
 enable_navbar_social: false
@@ -414,7 +414,7 @@ third_party_libraries:
     integrity:
       js: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     url:
-      js: "https://cdn.jsdmirror.com/npm/jquery@{{version}}/dist/jquery.min.js"
+      js: "/assets/js/jquery.min.js"
     version: "3.6.0"
   leaflet:
     integrity:
@@ -459,10 +459,10 @@ third_party_libraries:
       js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
       js_map: "sha256-UPgyn4YNsT0khkBK5553QwhnlbTlU0aa+igyc6qP1bE="
     url:
-      css: "https://cdn.jsdmirror.com/npm/mdbootstrap@{{version}}/css/mdb.min.css"
-      css_map: "https://cdn.jsdmirror.com/npm/mdbootstrap@{{version}}/css/mdb.min.css.map"
-      js: "https://cdn.jsdmirror.com/npm/mdbootstrap@{{version}}/js/mdb.min.js"
-      js_map: "https://cdn.jsdmirror.com/npm/mdbootstrap@{{version}}/js/mdb.min.js.map"
+      css: "/assets/css/mdb.min.css"
+      css_map: "/assets/css/mdb.min.css.map"
+      js: "/assets/js/mdb.min.js"
+      js_map: "/assets/js/mdb.min.js.map"
     version: "4.20.0"
   medium_zoom:
     integrity:
