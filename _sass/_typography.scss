@@ -35,6 +35,15 @@ table {
   }
 }
 
+.news table.table,
+.news table.table td,
+.news table.table th,
+.funding table.table,
+.funding table.table td,
+.funding table.table th {
+  color: var(--global-text-color);
+}
+
 a,
 table.table a {
   color: var(--global-theme-color);
@@ -46,6 +55,15 @@ table.table a {
 
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
+  }
+}
+
+.section-heading-link {
+  color: var(--global-text-color);
+
+  &:hover {
+    color: var(--global-text-color);
+    text-decoration: underline;
   }
 }
 

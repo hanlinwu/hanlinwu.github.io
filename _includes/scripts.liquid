@@ -152,7 +152,7 @@
   <script src="{{ '/assets/js/tooltips-setup.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
-{% if site.enable_medium_zoom %}
+{% if site.enable_medium_zoom and page.permalink != '/' %}
   <!-- Custom image zoom -->
   <script defer src="{{ '/assets/js/zoom.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
@@ -176,10 +176,14 @@
 <!-- Load Common JS -->
 <script src="{{ '/assets/js/no_defer.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/common.js' | relative_url | bust_file_cache }}"></script>
-<script defer src="{{ '/assets/js/copy_code.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% unless page.permalink == '/' %}
+  <script defer src="{{ '/assets/js/copy_code.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endunless %}
 
 <!-- Jupyter Open External Links New Tab -->
-<script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
+{% unless page.permalink == '/' %}
+  <script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
+{% endunless %}
 
 <!-- Badges -->
 {% if site.enable_publication_badges.altmetric %}
@@ -288,7 +292,7 @@
   ></script>
 {% endif %}
 
-{% if site.enable_progressbar %}
+{% if site.enable_progressbar and page.permalink != '/' %}
   <!-- Scrolling Progress Bar -->
   <script defer src="{{ '/assets/js/progress-bar.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
 {% endif %}
@@ -345,7 +349,7 @@
   <script src="{{ '/assets/js/tabs.min.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
-{% if site.back_to_top %}
+{% if site.back_to_top and page.permalink != '/' %}
   <!-- Back to Top -->
   <script src="{{ '/assets/js/vanilla-back-to-top.min.js' | relative_url | bust_file_cache }}"></script>
   <script>
@@ -355,11 +359,17 @@
 
 {% if site.search_enabled %}
   <!-- Search -->
-  <script type="module" src="{{ '/assets/js/search/ninja-keys.min.js' | relative_url | bust_file_cache }}"></script>
-  <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="Type to start searching"></ninja-keys>
-  <script src="{{ '/assets/js/search-setup.js' | relative_url | bust_file_cache }}"></script>
-  <script src="{{ '/assets/js/search-data.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/shortcut-key.js' | relative_url | bust_file_cache }}"></script>
+  {% if page.permalink == '/' %}
+    <script type="module" src="{{ '/assets/js/search/ninja-keys.min.js' | relative_url | bust_file_cache }}"></script>
+    <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="Type to start searching"></ninja-keys>
+    <script defer src="{{ '/assets/js/lazy-search.js' | relative_url | bust_file_cache }}"></script>
+  {% else %}
+    <script type="module" src="{{ '/assets/js/search/ninja-keys.min.js' | relative_url | bust_file_cache }}"></script>
+    <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="Type to start searching"></ninja-keys>
+    <script src="{{ '/assets/js/search-setup.js' | relative_url | bust_file_cache }}"></script>
+    <script src="{{ '/assets/js/search-data.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/shortcut-key.js' | relative_url | bust_file_cache }}"></script>
+  {% endif %}
 {% endif %}
 
 {% if site.newsletter.enabled %}

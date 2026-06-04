@@ -62,7 +62,11 @@ let applyTheme = () => {
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
   for (let i = 0; i < tables.length; i++) {
-    if (theme == "dark") {
+    const skipsThemeClass = tables[i].closest('[class*="news"], [class*="funding"]') !== null;
+
+    if (skipsThemeClass) {
+      tables[i].classList.remove("table-dark");
+    } else if (theme == "dark") {
       tables[i].classList.add("table-dark");
     } else {
       tables[i].classList.remove("table-dark");

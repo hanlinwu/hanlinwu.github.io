@@ -29,7 +29,7 @@ layout: default
       30vw, 95vw"{% endcapture %}
           <div class="profile-image-hover-wrapper">
             {%
-              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              include figure.liquid loading="eager" fetchpriority="high" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
               cache_bust=true
             %}
             {% if page.profile.image_hover %}
@@ -57,7 +57,7 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+        <a class="section-heading-link" href="{{ '/news/' | relative_url }}">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -65,7 +65,7 @@ layout: default
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        <a class="section-heading-link" href="{{ '/blog/' | relative_url }}">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
@@ -73,7 +73,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        <a class="section-heading-link" href="{{ '/publications/' | relative_url }}">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
@@ -81,7 +81,7 @@ layout: default
     <!-- Funding -->
     {% if page.funding %}
       <h2>
-        <a href="{{ '/funding/' | relative_url }}" style="color: inherit">Funding</a>
+        <a class="section-heading-link" href="{{ '/funding/' | relative_url }}">Funding</a>
       </h2>
       {% include funding.liquid %}
     {% endif %}

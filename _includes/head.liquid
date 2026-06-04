@@ -56,6 +56,19 @@
 {% endif %}
 
 <!-- Styles -->
+{% if page.permalink == '/' and page.profile and page.profile.image %}
+  {% assign preload_image_path = page.profile.image | prepend: '/assets/img/' | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
+  {% capture preload_image_sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+  <link
+    rel="preload"
+    as="image"
+    href="{{ preload_image_path | relative_url }}-480.webp"
+    imagesrcset="{% for i in site.imagemagick.widths %}{{ preload_image_path | relative_url }}-{{ i }}.webp {{ i }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"
+    imagesizes="{{ preload_image_sizes | strip }}"
+    fetchpriority="high"
+    type="image/webp"
+  >
+{% endif %}
 
 {% if page.pseudocode %}
   <!-- pseudocode -->
