@@ -454,7 +454,7 @@ third_party_libraries:
     version: "4.2.2"
   mdb:
     integrity:
-      css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+      css: "sha256-KgXNpnAaZ+KIvVTlkFoH/5i8fHyfRmdUkV40ljwCn2Y="
       css_map: "sha256-iYYMNfsJdVZjvsebJulg09miBXM4/GMTJgv1u5EZFFM="
       js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
       js_map: "sha256-UPgyn4YNsT0khkBK5553QwhnlbTlU0aa+igyc6qP1bE="
