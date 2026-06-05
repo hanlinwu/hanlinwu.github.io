@@ -2,7 +2,7 @@ require "set"
 
 module Jekyll
   module TopCitedScholar
-    def top_cited_scholar_ids(papers, max = 10)
+    def selected_preview_scholar_ids(papers, max = 10)
       return [] unless papers.respond_to?(:map)
 
       site = @context.registers[:site]
@@ -10,7 +10,7 @@ module Jekyll
       bib_source = scholar_config["source"] || "_bibliography"
       bibliography = scholar_config["bibliography"] || "references.bib"
       bib_path = File.join(site.source, bib_source.to_s.sub(%r{\A/+}, ""), bibliography)
-      available_ids = google_scholar_ids_in_bibliography(bib_path)
+      available_ids = preview_google_scholar_ids_in_bibliography(bib_path)
 
       papers
         .map do |key, paper|
@@ -22,7 +22,7 @@ module Jekyll
             paper.fetch("title", "").to_s,
           ]
         end
-        .select { |article_id, _citations, _year, _title| available_ids.include?(article_id) }
+        .select { |article_id, citations, _year, _title| citations > 10 && available_ids.include?(article_id) }
         .sort_by { |article_id, citations, year, title| [-citations, -year, title.downcase, article_id] }
         .first(max.to_i)
         .map(&:first)
@@ -30,10 +30,18 @@ module Jekyll
 
     private
 
-    def google_scholar_ids_in_bibliography(path)
+    def preview_google_scholar_ids_in_bibliography(path)
       return [] unless File.exist?(path)
 
-      File.read(path).scan(/google_scholar_id\s*=\s*\{([^}]+)\}/).flatten.map(&:strip).to_set
+      File.read(path)
+        .scan(/@\w+\s*\{.*?(?=^@\w+\s*\{|\z)/m)
+        .map do |entry|
+          scholar_id = entry[/google_scholar_id\s*=\s*\{([^}]+)\}/, 1]&.strip
+          preview = entry[/preview\s*=\s*\{([^}]*)\}/, 1]&.strip
+          scholar_id if scholar_id && preview && !preview.empty?
+        end
+        .compact
+        .to_set
     end
   end
 end

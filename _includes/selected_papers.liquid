@@ -1,6 +1,6 @@
 <div class="publications">
-  {% assign top_cited_scholar_ids = site.data.citations.papers | top_cited_scholar_ids: 10 %}
-  {% for scholar_id in top_cited_scholar_ids %}
+  {% assign selected_scholar_ids = site.data.citations.papers | selected_preview_scholar_ids: 10 %}
+  {% for scholar_id in selected_scholar_ids %}
     {% assign scholar_query = '@*[google_scholar_id=' | append: scholar_id | append: ']*' %}
     {% bibliography --group_by none --query {{ scholar_query }} %}
   {% endfor %}
