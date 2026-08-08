@@ -48,10 +48,7 @@ ninja.data = [{
             window.location.href = "/blog/2026/deltavlm/";
           
         },
-      },{id: "news-welcome-to-hanlin-wu-s-academic-homepage",
-          title: 'Welcome to Hanlin Wu’s academic homepage!',
-          description: "",
-          section: "News",},{id: "news-paper-accepted-changechat-an-interactive-model-for-remote-sensing-change-analysis-via-multimodal-instruction-tuning-at-icassp-2025",
+      },{id: "news-paper-accepted-changechat-an-interactive-model-for-remote-sensing-change-analysis-via-multimodal-instruction-tuning-at-icassp-2025",
           title: 'Paper accepted: “ChangeChat: An Interactive Model for Remote Sensing Change Analysis via Multimodal...',
           description: "",
           section: "News",},{id: "news-paper-published-deltavlm-interactive-remote-sensing-image-change-analysis-via-instruction-guided-difference-perception-in-remote-sensing-2026",
