@@ -114,6 +114,32 @@
             border-color: var(--global-theme-color);
           }
         }
+
+        a.citation-count {
+          align-items: center;
+          border: 0;
+          color: #4285f4;
+          display: inline-flex;
+          font-size: 0.78rem;
+          font-weight: 600;
+          gap: 0.25rem;
+          margin-left: 0.25rem;
+          padding: 0.25rem 0;
+          text-decoration: none;
+          vertical-align: middle;
+
+          &:hover {
+            color: var(--global-theme-color);
+            text-decoration: none;
+          }
+
+          i {
+            color: inherit;
+            font-size: 0.9rem;
+            line-height: 1;
+          }
+        }
+
         a.award.btn {
           border-color: var(--global-highlight-color);
         }
@@ -131,17 +157,6 @@
           &:hover {
             text-decoration: underline;
           }
-        }
-        .citation-badge {
-          background: #4285f4;
-          border-radius: 0.25rem;
-          color: #fff;
-          font-size: 0.72rem;
-          font-weight: 600;
-          line-height: 1.4;
-          margin-bottom: 0.2rem;
-          padding: 0.12rem 0.45rem 0.12rem 0.5rem;
-          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
         }
       }
 

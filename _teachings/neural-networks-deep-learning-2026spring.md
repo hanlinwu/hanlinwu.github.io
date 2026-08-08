@@ -26,12 +26,12 @@ course_image: /assets/img/teaching/neural-network-banner.jpg
 | 5 | 4月4日 | 深度学习的基本概念 | [PDF](/assets/teaching/nndl-2026/5-深度学习的基本概念.pdf) | |
 | 6 | 4月11日 | 实验课 | | |
 | 7 | 4月18日 | 大语言模型是如何被训练的 | [PDF](/assets/teaching/nndl-2026/7-LLM的训练.pdf) | |
-| 8 | 4月25日 | | | |
-| 9 | 5月2日 | | | |
-| 10 | ~~5月9日~~ | | | 劳动节放假 |
-| 11 | ~~5月16日~~ | | | 劳动节调课，本周停课 |
-| 12 | 5月23日 | | | |
-| 13 | 5月30日 | | | |
-| 14 | 6月6日 | | | |
-| 15 | 6月13日 | | | |
-| 16 | 6月20日 | | | |
+| 8 | 4月25日 | 强化学习与后训练 | [PDF](/assets/teaching/nndl-2026/8-RLHF_PostTrain.pdf) | |
+| 9 | 5月2日 | 劳动节放假 | | |
+| 10 | ~~5月9日~~ | 劳动节调课，本周停课 | | |
+| 11 | 5月16日 | 神经网络的训练技巧 | [PDF](/assets/teaching/nndl-2026/9-神经网络的训练技巧.pdf) | |
+| 12 | 5月23日 | 卷积神经网络 | [PDF](/assets/teaching/nndl-2026/10-CNN.pdf) | |
+| 13 | 5月30日 | 图像生成模型：GAN 与 VAE | [PDF](/assets/teaching/nndl-2026/11-GAN_VAE.pdf) | |
+| 14 | 6月6日 | 图像生成模型：扩散模型 | [PDF](/assets/teaching/nndl-2026/12-Diffusion.pdf) | |
+| 15 | 6月13日 | 实验课：Stable Diffusion | [PDF](/assets/teaching/nndl-2026/13-Stable_Diffusion.pdf) | |
+| 16 | 6月20日 | 世界模型 | [PDF](/assets/teaching/nndl-2026/16-WorldModel.pdf) | |
