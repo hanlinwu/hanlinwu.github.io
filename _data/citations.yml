@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-13'
+  last_updated: '2026-08-28'
 papers:
   o4bZgbIAAAAJ:2P1L_qKh6hAC:
     citations: 1
@@ -18,7 +18,7 @@ papers:
     title: 'Latent diffusion, implicit amplification: Efficient continuous-scale super-resolution for remote sensing images'
     year: '2025'
   o4bZgbIAAAAJ:GnPB-g6toBAC:
-    citations: 7
+    citations: 9
     title: 'Deltavlm: Interactive remote sensing image change analysis via instruction-guided difference perception'
     year: '2026'
   o4bZgbIAAAAJ:M3NEmzRMIkIC:
@@ -42,7 +42,7 @@ papers:
     title: Cross-scale coupling network for continuous-scale image super-resolution
     year: '2022'
   o4bZgbIAAAAJ:YFjsv_pBGBYC:
-    citations: 40
+    citations: 43
     title: 'Diffusion-rscc: Diffusion probabilistic model for change captioning in remote sensing images'
     year: '2025'
   o4bZgbIAAAAJ:_Qo2XoVZTnwC:
@@ -50,7 +50,7 @@ papers:
     title: Remote sensing image super-resolution via saliency-guided feedback GANs
     year: '2020'
   o4bZgbIAAAAJ:blknAaTinKkC:
-    citations: 52
+    citations: 53
     title: 'Changechat: An interactive model for remote sensing change analysis via multimodal instruction tuning'
     year: '2025'
   o4bZgbIAAAAJ:e5wmG9Sq2KIC:
@@ -78,7 +78,7 @@ papers:
     title: 'MapSR: Prompt-Driven Land Cover Map Super-Resolution via Vision Foundation Models'
     year: '2026'
   o4bZgbIAAAAJ:maZDTaKrznsC:
-    citations: 48
+    citations: 51
     title: Learning dynamic scale awareness and global implicit functions for continuous-scale super-resolution of remote sensing images
     year: '2023'
   o4bZgbIAAAAJ:r0BpntZqJG4C:
