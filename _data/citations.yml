@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-28'
+  last_updated: '2026-08-31'
 papers:
   o4bZgbIAAAAJ:2P1L_qKh6hAC:
     citations: 1
@@ -34,7 +34,7 @@ papers:
     title: Blind super-resolution for remote sensing images via conditional stochastic normalizing flows
     year: '2022'
   o4bZgbIAAAAJ:O3NaXMp0MMsC:
-    citations: 3
+    citations: 4
     title: Single-step latent consistency model for remote sensing image super-resolution
     year: '2025'
   o4bZgbIAAAAJ:RYcK_YlVTxYC:
@@ -46,7 +46,7 @@ papers:
     title: 'Diffusion-rscc: Diffusion probabilistic model for change captioning in remote sensing images'
     year: '2025'
   o4bZgbIAAAAJ:_Qo2XoVZTnwC:
-    citations: 37
+    citations: 38
     title: Remote sensing image super-resolution via saliency-guided feedback GANs
     year: '2020'
   o4bZgbIAAAAJ:blknAaTinKkC:
@@ -62,7 +62,7 @@ papers:
     title: "Toward efficient and accurate remote sensing image\u2013text retrieval with a coarse-to-fine approach"
     year: '2024'
   o4bZgbIAAAAJ:iH-uZ7U-co4C:
-    citations: 19
+    citations: 20
     title: Lightweight stepless super-resolution of remote sensing images via saliency-aware dynamic routing strategy
     year: '2023'
   o4bZgbIAAAAJ:isC4tDSrTZIC:
