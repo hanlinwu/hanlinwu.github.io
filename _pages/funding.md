@@ -7,6 +7,8 @@ nav: true
 nav_order: 4
 ---
 
+- **2026.07-2027.07**, Graduate Education Teaching Reform Research Project: Research on Content Reconstruction and Practical Paths of the "Deep Learning" Course in the Context of Generative Artificial Intelligence (生成式人工智能背景下“深度学习”课程内容重构与实践路径研究), **PI**
+
 - **2026.03-2029.03**, Beijing Foreign Studies University: Research on Multi-Agent Collaborative Heterogeneous Degraded Image Restoration Methods (多智能体协同的异质退化图像恢复方法研究), **PI**
 
 - **2025.01-2027.12**, National Natural Science Foundation of China (NSFC) Youth Science Fund Project: Research on Cognition-Inspired Super-Resolution Reconstruction Methods for Remote Sensing Images in Open Scenarios (开放场景下认知启发的遥感影像超分辨率重建方法研究), **PI**
