@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Deep Learning and Generative Models course banner</title>
+  <desc id="desc">Denoising steps and generated image tiles over a refined teal and coral background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1320"/>
+      <stop offset="0.52" stop-color="#124559"/>
+      <stop offset="1" stop-color="#f28482"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edf6f9" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#f6bd60" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <g opacity="0.18" fill="none" stroke="#ffffff" stroke-width="2">
+    <path d="M45 70 H1155"/>
+    <path d="M45 140 H1155"/>
+    <path d="M45 210 H1155"/>
+    <path d="M45 280 H1155"/>
+    <path d="M210 20 V340"/>
+    <path d="M430 20 V340"/>
+    <path d="M650 20 V340"/>
+    <path d="M870 20 V340"/>
+    <path d="M1090 20 V340"/>
+  </g>
+  <g transform="translate(112 74)">
+    <g fill="none" stroke="#edf6f9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 104 C78 28 158 178 236 104 S392 28 470 104 S626 178 704 104 S860 28 938 104"/>
+      <path d="M0 158 C78 82 158 232 236 158 S392 82 470 158 S626 232 704 158 S860 82 938 158" opacity="0.55"/>
+    </g>
+    <g fill="#edf6f9">
+      <circle cx="0" cy="104" r="7"/>
+      <circle cx="236" cy="104" r="7"/>
+      <circle cx="470" cy="104" r="7"/>
+      <circle cx="704" cy="104" r="7"/>
+      <circle cx="938" cy="104" r="7"/>
+    </g>
+  </g>
+  <g transform="translate(760 74)" opacity="0.94">
+    <rect x="0" y="0" width="90" height="90" rx="8" fill="#edf6f9" opacity="0.28"/>
+    <rect x="110" y="0" width="90" height="90" rx="8" fill="#edf6f9" opacity="0.46"/>
+    <rect x="220" y="0" width="90" height="90" rx="8" fill="#edf6f9" opacity="0.68"/>
+    <rect x="55" y="116" width="90" height="90" rx="8" fill="#f6bd60" opacity="0.54"/>
+    <rect x="165" y="116" width="90" height="90" rx="8" fill="url(#tile)"/>
+    <path d="M38 44 C58 26 76 34 86 52 C72 76 42 76 28 58 C29 52 32 48 38 44 Z" fill="#ffffff" opacity="0.65"/>
+    <path d="M148 34 C174 12 197 31 190 61 C174 88 133 77 130 52 C133 44 139 38 148 34 Z" fill="#ffffff" opacity="0.72"/>
+    <path d="M251 35 C275 16 303 30 302 60 C284 91 239 82 237 51 C240 44 245 39 251 35 Z" fill="#ffffff" opacity="0.82"/>
+    <circle cx="99" cy="160" r="27" fill="#ffffff" opacity="0.62"/>
+    <path d="M192 163 C207 132 244 139 246 172 C223 196 191 191 180 169 Z" fill="#ffffff" opacity="0.82"/>
+  </g>
+</svg>

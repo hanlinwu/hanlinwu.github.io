@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Neural Networks and Deep Learning course banner</title>
+  <desc id="desc">Conversation shapes connected with neural pathways for an introductory AI course.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#264653"/>
+      <stop offset="0.5" stop-color="#2a9d8f"/>
+      <stop offset="1" stop-color="#e76f51"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.38"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <g opacity="0.17" stroke="#ffffff" stroke-width="2" fill="none">
+    <path d="M0 286 C138 206 292 332 444 250 C586 174 720 176 870 236 C1002 288 1110 240 1200 182"/>
+    <path d="M0 82 C170 146 312 28 474 94 C624 155 748 55 928 108 C1054 146 1131 118 1200 96"/>
+  </g>
+  <g transform="translate(108 72)">
+    <rect x="0" y="12" width="300" height="92" rx="12" fill="url(#panel)"/>
+    <path d="M62 104 L38 134 L112 104 Z" fill="#ffffff" opacity="0.48"/>
+    <rect x="44" y="40" width="210" height="12" rx="6" fill="#264653" opacity="0.42"/>
+    <rect x="44" y="66" width="152" height="12" rx="6" fill="#264653" opacity="0.32"/>
+    <rect x="750" y="124" width="300" height="92" rx="12" fill="url(#panel)"/>
+    <path d="M996 216 L1036 248 L948 216 Z" fill="#ffffff" opacity="0.4"/>
+    <rect x="792" y="152" width="190" height="12" rx="6" fill="#264653" opacity="0.42"/>
+    <rect x="792" y="178" width="224" height="12" rx="6" fill="#264653" opacity="0.32"/>
+  </g>
+  <g transform="translate(430 48)" fill="none" stroke="#f1faee" stroke-width="3" stroke-linecap="round">
+    <path d="M86 42 C210 16 250 116 370 84 C492 51 548 168 670 132"/>
+    <path d="M78 216 C198 176 292 260 408 212 C506 172 578 226 690 184" opacity="0.65"/>
+    <path d="M86 42 L78 216 M232 82 L240 236 M392 84 L408 212 M548 132 L560 218 M670 132 L690 184" opacity="0.5"/>
+  </g>
+  <g transform="translate(430 48)">
+    <g fill="#f1faee">
+      <circle cx="86" cy="42" r="13"/><circle cx="232" cy="82" r="13"/><circle cx="392" cy="84" r="13"/>
+      <circle cx="548" cy="132" r="13"/><circle cx="670" cy="132" r="13"/>
+      <circle cx="78" cy="216" r="13"/><circle cx="240" cy="236" r="13"/><circle cx="408" cy="212" r="13"/>
+      <circle cx="560" cy="218" r="13"/><circle cx="690" cy="184" r="13"/>
+    </g>
+    <g fill="#e9c46a">
+      <circle cx="392" cy="84" r="6"/><circle cx="408" cy="212" r="6"/>
+    </g>
+  </g>
+</svg>
