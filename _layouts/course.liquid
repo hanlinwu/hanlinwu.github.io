@@ -111,6 +111,10 @@ layout: page
         <p><i class="fa-solid fa-calendar info-icon"></i><strong>学期：</strong>{{ page.term }}</p>
       {% endif %}
 
+      {% if page.weeks %}
+        <p><i class="fa-solid fa-list-ol info-icon"></i><strong>周次：</strong>{{ page.weeks }}</p>
+      {% endif %}
+
       {% if page.location %}
         <p><i class="fa-solid fa-location-dot info-icon"></i><strong>上课地点：</strong>{{ page.location }}</p>
       {% endif %}

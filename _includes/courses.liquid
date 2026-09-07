@@ -1,12 +1,18 @@
 {% if site.teachings %}
   <div class="courses">
-    {% assign courses_by_year = site.teachings | sort: 'year' | reverse | group_by: 'year' %}
+    {% assign courses = site.teachings | sort: 'term_order' | reverse %}
+    {% assign current_term = '' %}
 
-    {% for year_group in courses_by_year %}
-      <h2 class="year">{{ year_group.name }}</h2>
+    {% for course in courses %}
+      {% if course.term != current_term %}
+        {% unless forloop.first %}
+          </div>
+        {% endunless %}
+        {% assign current_term = course.term %}
+        {% assign term_heading = course.term | replace: ' 春季学期', ' 春' | replace: ' 秋季学期', ' 秋' %}
+      <h2 class="year">{{ term_heading }}</h2>
       <div class="course-list">
-        {% assign year_courses = year_group.items | sort: 'term' %}
-        {% for course in year_courses %}
+      {% endif %}
           <div class="course-item">
             <h3 class="course-title">
               <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
@@ -20,6 +26,18 @@
               {% if course.instructor %}
                 <span class="course-instructor">{{ course.instructor }}</span>
               {% endif %}
+
+              {% if course.weeks %}
+                <span class="course-weeks">{{ course.weeks }}</span>
+              {% endif %}
+
+              {% if course.location %}
+                <span class="course-location">{{ course.location }}</span>
+              {% endif %}
+
+              {% if course.time %}
+                <span class="course-time">{{ course.time }}</span>
+              {% endif %}
             </div>
 
             {% if course.description %}
@@ -28,8 +46,9 @@
               </div>
             {% endif %}
           </div>
-        {% endfor %}
+      {% if forloop.last %}
       </div>
+      {% endif %}
     {% endfor %}
   </div>
 {% else %}

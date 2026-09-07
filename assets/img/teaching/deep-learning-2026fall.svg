@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Deep Learning course banner</title>
+  <desc id="desc">Layered neural network paths over a blue green academic background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102a43"/>
+      <stop offset="0.56" stop-color="#1b4965"/>
+      <stop offset="1" stop-color="#2a9d8f"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#bde0fe" stop-opacity="0.25"/>
+      <stop offset="0.5" stop-color="#edf6f9" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#94d2bd" stop-opacity="0.35"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <g opacity="0.22">
+    <path d="M0 302 C178 238 282 353 444 274 C598 198 720 206 858 250 C997 294 1096 271 1200 216 L1200 360 L0 360 Z" fill="#e9d8a6"/>
+    <path d="M0 68 C171 116 314 28 488 82 C674 140 770 41 940 92 C1057 128 1133 106 1200 84" fill="none" stroke="#edf6f9" stroke-width="2" opacity="0.34"/>
+  </g>
+  <g transform="translate(130 64)">
+    <g fill="none" stroke="url(#line)" stroke-width="3">
+      <path d="M46 42 L218 26 L394 68 L568 40 L742 92 L914 58"/>
+      <path d="M46 122 L218 26 L394 150 L568 40 L742 172 L914 58"/>
+      <path d="M46 202 L218 214 L394 68 L568 222 L742 92 L914 238"/>
+      <path d="M46 42 L218 122 L394 150 L568 124 L742 172 L914 238"/>
+      <path d="M46 202 L218 122 L394 68 L568 124 L742 92 L914 58"/>
+      <path d="M46 122 L218 214 L394 150 L568 222 L742 172 L914 238"/>
+    </g>
+    <g fill="#edf6f9">
+      <circle cx="46" cy="42" r="10"/><circle cx="46" cy="122" r="10"/><circle cx="46" cy="202" r="10"/>
+      <circle cx="218" cy="26" r="11"/><circle cx="218" cy="122" r="11"/><circle cx="218" cy="214" r="11"/>
+      <circle cx="394" cy="68" r="12"/><circle cx="394" cy="150" r="12"/>
+      <circle cx="568" cy="40" r="12"/><circle cx="568" cy="124" r="12"/><circle cx="568" cy="222" r="12"/>
+      <circle cx="742" cy="92" r="11"/><circle cx="742" cy="172" r="11"/>
+      <circle cx="914" cy="58" r="10"/><circle cx="914" cy="238" r="10"/>
+    </g>
+    <g fill="#94d2bd" opacity="0.95">
+      <circle cx="914" cy="58" r="5"/><circle cx="914" cy="238" r="5"/>
+    </g>
+  </g>
+  <g opacity="0.16" filter="url(#soft)">
+    <rect x="920" y="16" width="210" height="210" rx="18" fill="#ffffff"/>
+  </g>
+</svg>

@@ -5,10 +5,11 @@ description: 面向非计算机专业的神经网络与深度学习导论课程�
 instructor: 吴瀚霖
 year: 2026
 term: 2026 春季学期
+term_order: 2026-03
 location: 国际大厦 313
 time: 每周六 10:00-11:35
 course_id: neural-networks-deep-learning-2026spring
-course_image: /assets/img/teaching/neural-network-banner.jpg
+course_image: /assets/img/teaching/neural-networks-deep-learning-2026spring.svg
 ---
 
 ## 课程简介
