@@ -63,7 +63,22 @@ ninja.data = [{
           section: "News",},{id: "news-paper-accepted-flow-based-gaussian-splatting-for-continuous-scale-remote-sensing-image-super-resolution-by-grsl",
           title: 'Paper accepted: “Flow-based Gaussian Splatting for Continuous-Scale Remote Sensing Image Super-Resolution” by GRSL....',
           description: "",
-          section: "News",},{id: "teachings-神经网络与深度学习-辅修",
+          section: "News",},{id: "teachings-深度学习",
+          title: '深度学习',
+          description: "研究生课程。",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/deep-learning-2026fall/";
+            },},{id: "teachings-深度学习与生成模型导论",
+          title: '深度学习与生成模型导论',
+          description: "本科生课程。",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/deep-learning-and-generative-models-2026fall/";
+            },},{id: "teachings-深度学习概论",
+          title: '深度学习概论',
+          description: "本科生课程。",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-deep-learning-2026fall/";
+            },},{id: "teachings-神经网络与深度学习-辅修",
           title: '神经网络与深度学习（辅修）',
           description: "面向非计算机专业的神经网络与深度学习导论课程，涵盖机器学习基本概念、深度学习基本原理及生成式人工智能的基本原理。",
           section: "Teachings",handler: () => {
