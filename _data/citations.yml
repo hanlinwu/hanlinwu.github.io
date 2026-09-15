@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-09-07'
+  last_updated: '2026-09-15'
 papers:
   o4bZgbIAAAAJ:2P1L_qKh6hAC:
     citations: 1
@@ -50,7 +50,7 @@ papers:
     title: Remote sensing image super-resolution via saliency-guided feedback GANs
     year: '2020'
   o4bZgbIAAAAJ:blknAaTinKkC:
-    citations: 53
+    citations: 55
     title: 'Changechat: An interactive model for remote sensing change analysis via multimodal instruction tuning'
     year: '2025'
   o4bZgbIAAAAJ:e5wmG9Sq2KIC:
