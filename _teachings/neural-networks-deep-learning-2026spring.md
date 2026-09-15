@@ -4,6 +4,8 @@ title: 神经网络与深度学习（辅修）
 description: 面向非计算机专业的神经网络与深度学习导论课程，涵盖机器学习基本概念、深度学习基本原理及生成式人工智能的基本原理。
 instructor: 吴瀚霖
 year: 2026
+academic_year: "2025–2026"
+course_level: 辅修课程
 term: 2026 春季学期
 term_order: 2026-03
 location: 国际大厦 313

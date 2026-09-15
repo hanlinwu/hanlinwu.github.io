@@ -269,6 +269,7 @@ filtered_bibtex_keywords:
     pmid,
     poster,
     preview,
+    research_area,
     selected,
     slides,
     supp,

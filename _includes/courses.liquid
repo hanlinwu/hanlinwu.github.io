@@ -9,43 +9,45 @@
           </div>
         {% endunless %}
         {% assign current_term = course.term %}
-        {% assign term_heading = course.term | replace: ' 春季学期', ' 春' | replace: ' 秋季学期', ' 秋' %}
-      <h2 class="year">{{ term_heading }}</h2>
+        {% assign semester = course.term | split: ' ' | last %}
+      <h2 class="course-term-heading">
+        {% if course.academic_year %}
+          <span>{{ course.academic_year }} 学年</span>
+          <span class="course-semester">{{ semester }}</span>
+        {% else %}
+          <span>{{ course.term }}</span>
+        {% endif %}
+      </h2>
       <div class="course-list">
       {% endif %}
-          <div class="course-item">
+          <article class="course-item">
+            {% if course.course_level %}
+              <div class="course-level">{{ course.course_level }}</div>
+            {% endif %}
             <h3 class="course-title">
               <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
             </h3>
 
-            <div class="course-meta">
-              {% if course.term %}
-                <span class="course-term">{{ course.term }}</span>
-              {% endif %}
-
-              {% if course.instructor %}
-                <span class="course-instructor">{{ course.instructor }}</span>
-              {% endif %}
-
-              {% if course.weeks %}
-                <span class="course-weeks">{{ course.weeks }}</span>
-              {% endif %}
-
-              {% if course.location %}
-                <span class="course-location">{{ course.location }}</span>
-              {% endif %}
-
-              {% if course.time %}
-                <span class="course-time">{{ course.time }}</span>
-              {% endif %}
-            </div>
-
-            {% if course.description %}
-              <div class="course-description">
-                {{ course.description | markdownify }}
+            <dl class="course-meta">
+              <div class="course-meta-row">
+                <dt>上课时间</dt>
+                <dd>
+                  {% if course.time %}
+                    {{ course.time }}
+                    {% if course.weeks %}<span class="course-weeks">{{ course.weeks }}</span>{% endif %}
+                  {% else %}
+                    <span class="course-pending">待公布</span>
+                  {% endif %}
+                </dd>
               </div>
-            {% endif %}
-          </div>
+              <div class="course-meta-row">
+                <dt>上课地点</dt>
+                <dd>
+                  {% if course.location %}{{ course.location }}{% else %}<span class="course-pending">待公布</span>{% endif %}
+                </dd>
+              </div>
+            </dl>
+          </article>
       {% if forloop.last %}
       </div>
       {% endif %}

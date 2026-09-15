@@ -1,4 +1,24 @@
 {% if site.bib_search %}
   <script src="{{ '/assets/js/bibsearch.js' | relative_url | bust_file_cache }}" type="module"></script>
-  <input type="text" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input" placeholder="Type to filter">
+  <div class="publication-filters" role="search" aria-label="Filter publications">
+    <div class="publication-research-filter">
+      <span id="publication-category-label" class="publication-filter-label">Topic</span>
+      <div id="publication-category" class="publication-category-buttons" role="group" aria-labelledby="publication-category-label">
+        <button type="button" data-category="" aria-pressed="true">All</button>
+      </div>
+    </div>
+    <div class="publication-filter publication-filter-search">
+      <label for="bibsearch">Search</label>
+      <input type="search" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input" placeholder="Title, author, or keyword">
+    </div>
+    <div class="publication-filter">
+      <label for="publication-year">Year</label>
+      <select id="publication-year">
+        <option value="">All years</option>
+      </select>
+    </div>
+    <button type="button" id="publication-reset">Reset</button>
+  </div>
+  <p id="publication-count" class="publication-count" role="status" aria-live="polite" aria-atomic="true"></p>
+  <p id="publication-empty" class="publication-empty" hidden>No publications match your filters. Try another topic, year, or keyword.</p>
 {% endif %}

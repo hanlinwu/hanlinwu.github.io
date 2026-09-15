@@ -1,6 +1,6 @@
 ---
 ---
-<div class="row">
+<div class="row" data-publication-category="{{ entry.research_area | escape }}" data-publication-year="{{ entry.year | escape }}">
   {% if site.enable_publication_thumbnails %}
     {% assign preview_col_class = 'col-sm-2' %}
     {% assign entry_col_class = 'col-sm-8' %}

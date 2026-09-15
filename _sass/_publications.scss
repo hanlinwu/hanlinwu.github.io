@@ -4,6 +4,107 @@
 
 @use "variables" as v;
 
+.publication-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+
+  .publication-filter {
+    flex: 1 1 10rem;
+    min-width: 0;
+  }
+
+  .publication-filter-search {
+    flex: 3 1 15rem;
+  }
+
+  .publication-research-filter {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  label,
+  .publication-filter-label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  input,
+  select,
+  button {
+    height: 2.75rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    padding: 0.5rem 0.75rem;
+    font: inherit;
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+    }
+  }
+
+  input,
+  select {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+  }
+
+  button {
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    &:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+  }
+
+  .publication-category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    button {
+      height: auto;
+      min-height: 2.5rem;
+      max-width: 100%;
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.85rem;
+      text-align: left;
+
+      &[aria-pressed="true"] {
+        background: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+        color: var(--global-bg-color);
+      }
+    }
+  }
+}
+
+.publication-count {
+  margin: 0.75rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+}
+
+.publication-empty {
+  margin-top: 2rem;
+  color: var(--global-text-color-light);
+}
+
 .publications {
   margin-top: 2rem;
 

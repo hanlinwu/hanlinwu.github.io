@@ -1,70 +1,108 @@
 import { highlightSearchTerm } from "./highlight-search-term.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // actual bibsearch logic
-  const filterItems = (searchTerm) => {
-    document.querySelectorAll(".bibliography, .unloaded").forEach((element) => element.classList.remove("unloaded"));
+  const search = document.getElementById("bibsearch");
+  const category = document.getElementById("publication-category");
+  const year = document.getElementById("publication-year");
+  const reset = document.getElementById("publication-reset");
+  const count = document.getElementById("publication-count");
+  const empty = document.getElementById("publication-empty");
+  const publications = document.querySelector(".publications");
+  if (!search || !category || !year || !publications) return;
 
-    // highlight-search-term
-    if (CSS.highlights) {
-      const nonMatchingElements = highlightSearchTerm({ search: searchTerm, selector: ".bibliography > li" });
-      if (nonMatchingElements == null) {
-        return;
-      }
-      nonMatchingElements.forEach((element) => {
-        element.classList.add("unloaded");
-      });
-    } else {
-      // Simply add unloaded class to all non-matching items if Browser does not support CSS highlights
-      document.querySelectorAll(".bibliography > li").forEach((element, index) => {
-        const text = element.innerText.toLowerCase();
-        if (text.indexOf(searchTerm) == -1) {
-          element.classList.add("unloaded");
+  const items = Array.from(publications.querySelectorAll("ol.bibliography > li"), (element) => {
+    const metadata = element.querySelector("[data-publication-category]");
+    return {
+      element,
+      category: metadata?.dataset.publicationCategory || "",
+      year: metadata?.dataset.publicationYear || "",
+      text: element.textContent.toLowerCase(),
+    };
+  });
+
+  const addOptions = (select, values) => {
+    values.forEach((value) => select.add(new Option(value, value)));
+  };
+  let selectedCategory = "";
+  const topicOrder = ["Image Restoration", "Multimodal Machine Learning", "Other"];
+  const topics = [...new Set(items.map((item) => item.category).filter(Boolean))];
+  const topicRank = (topic) => (topicOrder.includes(topic) ? topicOrder.indexOf(topic) : topicOrder.length);
+  topics.sort((a, b) => topicRank(a) - topicRank(b) || a.localeCompare(b));
+  topics.forEach((value) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.dataset.category = value;
+    button.textContent = value;
+    button.setAttribute("aria-pressed", "false");
+    category.appendChild(button);
+  });
+  addOptions(year, [...new Set(items.map((item) => item.year).filter(Boolean))].sort((a, b) => Number(b) - Number(a)));
+
+  const filterItems = () => {
+    const term = search.value.trim().toLowerCase();
+    let visibleCount = 0;
+    items.forEach((item) => {
+      const matches = (!selectedCategory || item.category === selectedCategory) && (!year.value || item.year === year.value) && item.text.includes(term);
+      item.element.classList.toggle("unloaded", !matches);
+      if (matches) visibleCount++;
+    });
+
+    // Walk backwards so each grouping heading reflects its following list(s).
+    const visibleByLevel = new Map();
+    Array.from(publications.children).reverse().forEach((element) => {
+      if (element.matches("ol.bibliography")) {
+        const visible = !!element.querySelector(":scope > li:not(.unloaded)");
+        element.classList.toggle("unloaded", !visible);
+        for (let level = 1; level <= 6; level++) {
+          visibleByLevel.set(level, visibleByLevel.get(level) || visible);
         }
-      });
+      } else if (element.matches("h1.bibliography, h2.bibliography, h3.bibliography, h4.bibliography, h5.bibliography, h6.bibliography")) {
+        const level = Number(element.tagName.substring(1));
+        element.classList.toggle("unloaded", !visibleByLevel.get(level));
+        for (let nested = level; nested <= 6; nested++) visibleByLevel.set(nested, false);
+      }
+    });
+
+    if (window.CSS?.highlights) {
+      highlightSearchTerm({ search: term, selector: ".publications ol.bibliography > li:not(.unloaded)" });
     }
-
-    document.querySelectorAll("h2.bibliography").forEach(function (element) {
-      let iterator = element.nextElementSibling; // get next sibling element after h2, which can be h3 or ol
-      let hideFirstGroupingElement = true;
-      // iterate until next group element (h2), which is already selected by the querySelectorAll(-).forEach(-)
-      while (iterator && iterator.tagName !== "H2") {
-        if (iterator.tagName === "OL") {
-          const ol = iterator;
-          const unloadedSiblings = ol.querySelectorAll(":scope > li.unloaded");
-          const totalSiblings = ol.querySelectorAll(":scope > li");
-
-          if (unloadedSiblings.length === totalSiblings.length) {
-            ol.previousElementSibling.classList.add("unloaded"); // Add the '.unloaded' class to the previous grouping element (e.g. year)
-            ol.classList.add("unloaded"); // Add the '.unloaded' class to the OL itself
-          } else {
-            hideFirstGroupingElement = false; // there is at least some visible entry, don't hide the first grouping element
-          }
-        }
-        iterator = iterator.nextElementSibling;
-      }
-      // Add unloaded class to first grouping element (e.g. year) if no item left in this group
-      if (hideFirstGroupingElement) {
-        element.classList.add("unloaded");
-      }
+    count.textContent = `${visibleCount} of ${items.length} publications`;
+    empty.hidden = visibleCount !== 0;
+    reset.disabled = !search.value && !selectedCategory && !year.value;
+    category.querySelectorAll("button").forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.category === selectedCategory));
     });
   };
 
-  const updateInputField = () => {
-    const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
-    document.getElementById("bibsearch").value = hashValue;
-    filterItems(hashValue);
-  };
-
-  // Sensitive search. Only start searching if there's been no input for 300 ms
   let timeoutId;
-  document.getElementById("bibsearch").addEventListener("input", function () {
-    clearTimeout(timeoutId); // Clear the previous timeout
-    const searchTerm = this.value.toLowerCase();
-    timeoutId = setTimeout(filterItems(searchTerm), 300);
+  search.addEventListener("input", () => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(filterItems, 150);
+  });
+  category.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-category]");
+    if (!button) return;
+    selectedCategory = button.dataset.category;
+    filterItems();
+  });
+  year.addEventListener("change", filterItems);
+  reset.addEventListener("click", () => {
+    clearTimeout(timeoutId);
+    search.value = "";
+    selectedCategory = "";
+    year.value = "";
+    if (window.location.hash) history.replaceState(null, "", window.location.pathname + window.location.search);
+    filterItems();
   });
 
-  window.addEventListener("hashchange", updateInputField); // Update the filter when the hash changes
-
-  updateInputField(); // Update filter when page loads
+  const updateFromHash = () => {
+    try {
+      search.value = decodeURIComponent(window.location.hash.substring(1));
+    } catch {
+      search.value = window.location.hash.substring(1);
+    }
+    filterItems();
+  };
+  window.addEventListener("hashchange", updateFromHash);
+  updateFromHash();
 });
