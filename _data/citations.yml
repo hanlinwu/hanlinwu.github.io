@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-09-15'
+  last_updated: '2026-09-19'
 papers:
   o4bZgbIAAAAJ:2P1L_qKh6hAC:
     citations: 1
@@ -14,7 +14,7 @@ papers:
     title: 'Afdn: Attention-based feedback dehazing network for uav remote sensing image haze removal'
     year: '2021'
   o4bZgbIAAAAJ:BqipwSGYUEgC:
-    citations: 16
+    citations: 18
     title: 'Latent diffusion, implicit amplification: Efficient continuous-scale super-resolution for remote sensing images'
     year: '2025'
   o4bZgbIAAAAJ:GnPB-g6toBAC:
@@ -22,7 +22,7 @@ papers:
     title: 'Deltavlm: Interactive remote sensing image change analysis via instruction-guided difference perception'
     year: '2026'
   o4bZgbIAAAAJ:M3NEmzRMIkIC:
-    citations: 26
+    citations: 27
     title: Conditional stochastic normalizing flows for blind super-resolution of remote sensing images
     year: '2023'
   o4bZgbIAAAAJ:NMxIlDl6LWMC:
@@ -50,7 +50,7 @@ papers:
     title: Remote sensing image super-resolution via saliency-guided feedback GANs
     year: '2020'
   o4bZgbIAAAAJ:blknAaTinKkC:
-    citations: 55
+    citations: 56
     title: 'Changechat: An interactive model for remote sensing change analysis via multimodal instruction tuning'
     year: '2025'
   o4bZgbIAAAAJ:e5wmG9Sq2KIC:
