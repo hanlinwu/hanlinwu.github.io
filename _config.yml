@@ -219,6 +219,7 @@ display_categories: []
 scholar:
   last_name: [Wu]
   first_name: [Hanlin, H.]
+  name_aliases: [吴瀚霖]
 
   style: apa
   locale: en
