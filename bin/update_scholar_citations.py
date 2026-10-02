@@ -3,6 +3,7 @@
 import os
 import sys
 import yaml
+from copy import deepcopy
 from datetime import datetime
 from scholarly import scholarly
 
@@ -34,12 +35,35 @@ def load_scholar_user_id() -> str:
 
 SCHOLAR_USER_ID: str = load_scholar_user_id()
 OUTPUT_FILE: str = "_data/citations.yml"
+MERGES_FILE: str = "_data/citation_merges.yml"
+
+
+def merge_citation_records(papers, merge_groups):
+    """Sum user-confirmed duplicate records and retain their source counts."""
+    merged = deepcopy(papers)
+    for primary_id, aliases in merge_groups.items():
+        if primary_id not in merged:
+            print(f"Warning: Cannot merge citations without primary record {primary_id}.")
+            continue
+        primary = merged[primary_id]
+        for alias_id in aliases:
+            if alias_id == primary_id or alias_id not in merged:
+                continue
+            alias = merged.pop(alias_id)
+            sources = primary.setdefault(
+                "citation_sources", {primary_id: primary["citations"]}
+            )
+            sources[alias_id] = alias["citations"]
+            primary["citations"] = sum(sources.values())
+            print(f"Merged {alias_id} into {primary_id}: {primary['citations']} citations")
+    return merged
 
 
 def get_scholar_citations() -> None:
     """Fetch and update Google Scholar citation data."""
     print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
     today = datetime.now().strftime("%Y-%m-%d")
+    existing_data = None
 
     # Check if the output file was already updated today
     if os.path.exists(OUTPUT_FILE):
@@ -107,6 +131,13 @@ def get_scholar_citations() -> None:
             print(
                 f"Error processing publication '{pub.get('bib', {}).get('title', 'Unknown')}': {e}. This publication will be skipped."
             )
+
+    if os.path.exists(MERGES_FILE):
+        with open(MERGES_FILE, "r") as f:
+            merge_groups = yaml.safe_load(f) or {}
+        citation_data["papers"] = merge_citation_records(
+            citation_data["papers"], merge_groups
+        )
 
     # Compare new data with existing data
     if existing_data and existing_data.get("papers") == citation_data["papers"]:
