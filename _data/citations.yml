@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-10-02'
+  last_updated: '2026-10-05'
 papers:
   o4bZgbIAAAAJ:2P1L_qKh6hAC:
     citations: 1
@@ -14,7 +14,7 @@ papers:
     title: 'Afdn: Attention-based feedback dehazing network for uav remote sensing image haze removal'
     year: '2021'
   o4bZgbIAAAAJ:BqipwSGYUEgC:
-    citations: 18
+    citations: 20
     title: 'Latent diffusion, implicit amplification: Efficient continuous-scale super-resolution for remote sensing images'
     year: '2025'
   o4bZgbIAAAAJ:GnPB-g6toBAC:
@@ -38,7 +38,7 @@ papers:
     title: Single-step latent consistency model for remote sensing image super-resolution
     year: '2025'
   o4bZgbIAAAAJ:RYcK_YlVTxYC:
-    citations: 2
+    citations: 3
     title: Cross-scale coupling network for continuous-scale image super-resolution
     year: '2022'
   o4bZgbIAAAAJ:YFjsv_pBGBYC:
