@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-10-05'
+  last_updated: '2026-10-06'
 papers:
   o4bZgbIAAAAJ:2P1L_qKh6hAC:
     citations: 1
@@ -42,7 +42,7 @@ papers:
     title: Cross-scale coupling network for continuous-scale image super-resolution
     year: '2022'
   o4bZgbIAAAAJ:YFjsv_pBGBYC:
-    citations: 44
+    citations: 45
     title: 'Diffusion-rscc: Diffusion probabilistic model for change captioning in remote sensing images'
     year: '2025'
   o4bZgbIAAAAJ:_Qo2XoVZTnwC:
@@ -58,7 +58,7 @@ papers:
     title: 'Sd-fb-gan: saliency-driven feedback gan for remote sensing image super-resolution reconstruction'
     year: '2020'
   o4bZgbIAAAAJ:hMod-77fHWUC:
-    citations: 14
+    citations: 15
     title: "Toward efficient and accurate remote sensing image\u2013text retrieval with a coarse-to-fine approach"
     year: '2024'
   o4bZgbIAAAAJ:iH-uZ7U-co4C:
