@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-10-06'
+  last_updated: '2026-10-19'
 papers:
   o4bZgbIAAAAJ:2P1L_qKh6hAC:
     citations: 1
@@ -18,7 +18,7 @@ papers:
     title: 'Latent diffusion, implicit amplification: Efficient continuous-scale super-resolution for remote sensing images'
     year: '2025'
   o4bZgbIAAAAJ:GnPB-g6toBAC:
-    citations: 11
+    citations: 12
     title: 'Deltavlm: Interactive remote sensing image change analysis via instruction-guided difference perception'
     year: '2026'
   o4bZgbIAAAAJ:M3NEmzRMIkIC:
@@ -42,7 +42,7 @@ papers:
     title: Cross-scale coupling network for continuous-scale image super-resolution
     year: '2022'
   o4bZgbIAAAAJ:YFjsv_pBGBYC:
-    citations: 45
+    citations: 46
     title: 'Diffusion-rscc: Diffusion probabilistic model for change captioning in remote sensing images'
     year: '2025'
   o4bZgbIAAAAJ:_Qo2XoVZTnwC:
@@ -50,7 +50,7 @@ papers:
     title: Remote sensing image super-resolution via saliency-guided feedback GANs
     year: '2020'
   o4bZgbIAAAAJ:blknAaTinKkC:
-    citations: 57
+    citations: 58
     title: 'Changechat: An interactive model for remote sensing change analysis via multimodal instruction tuning'
     year: '2025'
   o4bZgbIAAAAJ:e5wmG9Sq2KIC:
