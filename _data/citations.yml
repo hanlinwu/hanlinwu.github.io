@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-10-31'
+  last_updated: '2026-11-01'
 papers:
   o4bZgbIAAAAJ:2P1L_qKh6hAC:
     citations: 1
@@ -22,17 +22,13 @@ papers:
     title: 'Deltavlm: Interactive remote sensing image change analysis via instruction-guided difference perception'
     year: '2026'
   o4bZgbIAAAAJ:M3NEmzRMIkIC:
-    citations: 28
+    citations: 38
     title: Conditional stochastic normalizing flows for blind super-resolution of remote sensing images
     year: '2023'
   o4bZgbIAAAAJ:NMxIlDl6LWMC:
     citations: 3
     title: 'From Coarse To Fine: An Offline-Online Approach for Remote Sensing Cross-Modal Retrieval'
     year: '2024'
-  o4bZgbIAAAAJ:NaGl4SEjCO4C:
-    citations: 10
-    title: Blind super-resolution for remote sensing images via conditional stochastic normalizing flows
-    year: '2022'
   o4bZgbIAAAAJ:O3NaXMp0MMsC:
     citations: 4
     title: Single-step latent consistency model for remote sensing image super-resolution
@@ -58,7 +54,7 @@ papers:
     title: 'Sd-fb-gan: saliency-driven feedback gan for remote sensing image super-resolution reconstruction'
     year: '2020'
   o4bZgbIAAAAJ:hMod-77fHWUC:
-    citations: 15
+    citations: 17
     title: "Toward efficient and accurate remote sensing image\u2013text retrieval with a coarse-to-fine approach"
     year: '2024'
   o4bZgbIAAAAJ:iH-uZ7U-co4C:
